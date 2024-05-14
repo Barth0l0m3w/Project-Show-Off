@@ -5,37 +5,45 @@ using UnityEngine.EventSystems;
 
 public class PlatformMovement : MonoBehaviour
 {
-    private Bats bats;
-    
+    //private Bats bats;
+
+    [SerializeField] private GameObject bats;
+    [SerializeField] private GameObject face;
     [SerializeField] private float speed;
-    private Vector3 position;
 
-    [SerializeField] private Vector3 acceleration;
+    private Vector3 _position;
+    private Vector3 _acceleration;
 
-    public GameObject platform;
+    public Vector3 offsetToPlayer;
+
+    //public GameObject platform;
 
     // Start is called before the first frame update
     void Start()
     {
-        speed = 0.01f;
-        acceleration.y -= speed;
+        _acceleration.y -= speed;
     }
 
     // Update is called once per frame
     void Update()
     {
-        platform.transform.position += acceleration;
+        this.transform.position += _acceleration;
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name == "trigger")
         {
-            Debug.Log("trigger reached");
-            Destroy(other.gameObject);
-            acceleration.y = 0;
+            Vector3 pos = face.transform.position + offsetToPlayer;
+            Vector3 direction = (face.transform.position - pos).normalized; //angle towards player
             
-            //todo: instansiate bats. 
+            Destroy(other.gameObject);
+            
+            _acceleration.y = 0;
+
+            Instantiate(bats, pos, Quaternion.LookRotation(direction));
+            
+            
         }
     }
 }
