@@ -15,8 +15,6 @@ public class Bats : MonoBehaviour
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
-        Vector3 startpos = this.transform.position;
-        
     }
 
     // Update is called once per frame
