@@ -735,6 +735,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &2410320490578971645
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3386016650999968275}
+  m_Layer: 0
+  m_Name: LeverPivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3386016650999968275
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2410320490578971645}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.965, z: 0.453}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5867709563347968911}
+  m_Father: {fileID: 4786552596458959375}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2523877452439750779
 GameObject:
   m_ObjectHideFlags: 0
@@ -877,7 +909,7 @@ Transform:
   - {fileID: 5804944954396641375}
   - {fileID: 9168775145310499219}
   - {fileID: 2911889515642186545}
-  - {fileID: 5867709563347968911}
+  - {fileID: 3386016650999968275}
   - {fileID: 9075551310071837743}
   - {fileID: 7962688094061229154}
   - {fileID: 2209468520667654527}
@@ -1995,7 +2027,7 @@ GameObject:
   - component: {fileID: 1781882300039943361}
   - component: {fileID: 7918135172929485615}
   m_Layer: 0
-  m_Name: Cube (24)
+  m_Name: LeverModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2010,11 +2042,11 @@ Transform:
   m_GameObject: {fileID: 5401857616287834810}
   serializedVersion: 2
   m_LocalRotation: {x: 0.6428797, y: 0.64287895, z: -0.29445767, w: 0.29446054}
-  m_LocalPosition: {x: 0, y: 1, z: 0.4}
+  m_LocalPosition: {x: 0, y: 0.035000026, z: -0.052999914}
   m_LocalScale: {x: 0.2, y: 0.05, z: 0.05}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4786552596458959375}
+  m_Father: {fileID: 3386016650999968275}
   m_LocalEulerAnglesHint: {x: 130.781, y: 0, z: -90}
 --- !u!33 &1730532578993234302
 MeshFilter:
