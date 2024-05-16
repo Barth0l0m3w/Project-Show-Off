@@ -1,28 +1,34 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Bats : MonoBehaviour
 {
+    [SerializeField] private float speed;
+    Rigidbody _rigidbody;
+
     // Start is called before the first frame update
     private GameObject bat;
-    
+
     void Start()
     {
-        //get player position. 
-        //accelerate towards waypoint
-        //waypoint 1, player face.
-        //waypoint 2 bit after player face.
+        _rigidbody = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        _rigidbody.velocity = transform.forward * speed;
     }
 
-    void ReleaseTheBats()
+    private void OnTriggerEnter(Collider other)
     {
-        //todo: Instantiate();
+        if (other.gameObject.name == "Destroy")
+        {
+            Debug.Log("WALL");
+            Destroy(this.gameObject);
+        }
     }
 }
