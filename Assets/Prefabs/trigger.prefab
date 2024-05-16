@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1001874403108433510}
   m_Layer: 0
   m_Name: trigger
-  m_TagString: Untagged
+  m_TagString: EventTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,5 +118,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 803f00cc235ebaa4f99de3c918a7c8d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whatTrigger: 
   _platform: {fileID: 0}
+  triggerType: 0

@@ -6,22 +6,37 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private XRKnob _xrKnob;
-    [SerializeField] private MovingCube platform;
+    public MovingCube platform;
+    public XRKnob _xrKnob;
+    public static GameManager Instance;
     private float value;
+
+
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else if (Instance != this)
+        {
+            Destroy(this);
+        }
+        
+    }
     
-    // Start is called before the first frame update
     void Start()
     {
         SetValue();
     }
 
-
+    //TODO: Remove later as it doesn't show up on VR screen
+    #if UNITY_EDITOR
     private void OnGUI()
     {
         GUI.Label(new Rect(new Vector2(0,0), new Vector2(200, 200)), "The value is: " + value);
     }
-
+    #endif
 
 
     public void SetValue()
@@ -29,7 +44,7 @@ public class GameManager : MonoBehaviour
         value = _xrKnob.value;
     }
     
-    // Update is called once per frame
+
     void Update()
     {
         platform.currentState = value;

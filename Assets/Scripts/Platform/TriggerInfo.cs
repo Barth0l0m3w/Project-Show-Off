@@ -8,9 +8,10 @@ using UnityEngine.Serialization;
 
 public class TriggerInfo : MonoBehaviour
 {
-    public PlatformMovement _platform;
+    public MovingCube _platform;
 
-    enum TriggerType
+    
+    public enum TriggerType
     {
         BATS,
         ROCK
