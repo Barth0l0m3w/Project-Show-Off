@@ -7,41 +7,58 @@ using UnityEngine;
 public class MovingCube : MonoBehaviour
 {
     #region SpeedParameters
-    [Header("Speed Parameters")]
-    [SerializeField]private float stoppingDeceleration;
-    [SerializeField]private float cruisingTopSpeed;
-    [SerializeField]private float cruisingAcceleration;
-    [SerializeField]private float freefallTopSpeed;
-    [SerializeField]private float freefallAcceleration;
+
+    [Header("Speed Parameters")] [SerializeField]
+    private float stoppingDeceleration;
+
+    [SerializeField] private float cruisingTopSpeed;
+    [SerializeField] private float cruisingAcceleration;
+    [SerializeField] private float freefallTopSpeed;
+    [SerializeField] private float freefallAcceleration;
+
     #endregion
 
     //TODO: Move this whole logic on TriggerInfo
-    #region Refferences
-    [Header("Object Refferences")]
-    [SerializeField] private GameObject batsPrefab;
-    [SerializeField] private GameObject rocksPrefab;
-    [SerializeField] private GameObject playerCamera;
     
-    public Vector3 batsSpawnOffset;
-    public Vector3 rocksSpawnOffset;
-    #endregion
-    
+
     #region StateInfo
-    [HideInInspector]public float currentState;
+
+    [HideInInspector] public float currentState;
     private const float STOP = 0;
     private const float CRUISE = 0.5f;
     private const float FREEFALL = 1;
+
     #endregion
 
     #region ToBeRemoved_MoveParams
-    [Header("Location to move to")]
-    [SerializeField] private Transform mp2;
+
+    [Header("Location to move to")] [SerializeField]
+    private Transform mp2;
+
     private Vector3 p2;
     private Vector3 currentTarget;
+
     #endregion
-    
+
     private float currentSpeed = 0;
-    
+
+    //testing sake keycomands
+    /*private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            GameManager.Instance._xrKnob.value = FREEFALL;
+        }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            GameManager.Instance._xrKnob.value = CRUISE;
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            GameManager.Instance._xrKnob.value = STOP;
+        }
+    }*/
+
     // These should be removed when the level is more established
     void Start()
     {
@@ -68,7 +85,7 @@ public class MovingCube : MonoBehaviour
     void ApplySpeed(float acceleration, float topSpeed)
     {
         float speedChange = acceleration * Time.deltaTime;
-        
+
         if (currentSpeed > topSpeed)
         {
             currentSpeed = Mathf.MoveTowards(currentSpeed, topSpeed, stoppingDeceleration * Time.deltaTime);
@@ -77,6 +94,7 @@ public class MovingCube : MonoBehaviour
         {
             currentSpeed = Mathf.MoveTowards(currentSpeed, topSpeed, speedChange);
         }
+
         Vector3 newPosition = Vector3.MoveTowards(transform.position, currentTarget, currentSpeed * Time.deltaTime);
         transform.position = newPosition;
     }
@@ -91,28 +109,8 @@ public class MovingCube : MonoBehaviour
         }
     }
 
-    //TODO: Move this to TriggerInfo
-    public void TypeTrigger(string type)
-    {
-        if (type == "Bats")
-        {
-            Debug.Log("release the bats");
-            Vector3 posBat = playerCamera.transform.position + batsSpawnOffset;
-            Vector3 direction = (playerCamera.transform.position - posBat).normalized;
-
-            Instantiate(batsPrefab, posBat, Quaternion.LookRotation(direction));
-        } else if (type == "Rock")
-        {
-            Debug.Log("watch out for your head");
-            Vector3 posRock = playerCamera.transform.position + rocksSpawnOffset;
-            Instantiate(rocksPrefab, posRock, Quaternion.identity);
-        }
-    }
-    
     void FixedUpdate()
     {
         MoveLift();
     }
-
-    
 }

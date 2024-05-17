@@ -8,16 +8,14 @@ public class PlatformMovement : MonoBehaviour
 {
     //private Bats bats;
 
-    [SerializeField] private GameObject bats;
-    [SerializeField] private GameObject rock;
-    [SerializeField] private GameObject face;
+    
+    
 
     [SerializeField] private float speed;
 
     private Vector3 _acceleration;
 
-    public Vector3 batsOffset;
-    public Vector3 rockOffset;
+    
 
     //public GameObject platform;
 
@@ -42,22 +40,16 @@ public class PlatformMovement : MonoBehaviour
         }
     }
 
-    public void TypeTrigger(string type)
+    /*public void TypeTrigger(string type)
     {
         if (type == "Bats")
         {
-            Debug.Log("release the bats");
-            Vector3 posBat = face.transform.position + batsOffset;
-            Vector3 direction = (face.transform.position - posBat).normalized;
-
-            Instantiate(bats, posBat, Quaternion.LookRotation(direction));
+            
         } else if (type == "Rock")
         {
-            Debug.Log("watch out for your head");
-            Vector3 posRock = face.transform.position + rockOffset;
-            Instantiate(rock, posRock, Quaternion.identity);
+            
         }
-    }
+    }*/
 
     public void Stop()
     {
