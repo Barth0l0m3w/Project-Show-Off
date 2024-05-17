@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public XRKnob _xrKnob;
     public static GameManager Instance;
     private float value;
+    public GameObject face;
 
 
     void Awake()
