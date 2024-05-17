@@ -26,6 +26,7 @@ public class TriggerInfo : MonoBehaviour
             if (triggerType == TriggerType.BATS)
             {
                 _platform.TypeTrigger("Bats");
+                
             }
 
             if (triggerType == TriggerType.ROCK)
