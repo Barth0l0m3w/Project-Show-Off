@@ -27,14 +27,16 @@ public class TriggerInfo : MonoBehaviour
 
     [SerializeField] private TriggerType triggerType;
 
+    //TODO: Swap out OnTriggerEnter to avoid relying on RigidBody. Maybe use raw distance check
+    //OnTriggerEnters dependant on colliders and having Rigid bodies, but we don't use that for movement or physics
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "Platform")
+        if (other.CompareTag("Platform"))
         {
             if (triggerType == TriggerType.BATS)
             {
                 Debug.Log("release the bats");
-                Vector3 posBat = GameManager.Instance.face.transform.position + batsOffset.position;
+                Vector3 posBat = batsOffset.position;
                 Vector3 direction = (GameManager.Instance.face.transform.position - posBat).normalized;
 
                 Instantiate(bats, posBat, Quaternion.LookRotation(direction));

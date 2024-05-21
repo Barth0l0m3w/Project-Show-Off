@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Anchor
   - EventTrigger
+  - Platform
   layers:
   - Default
   - TransparentFX
