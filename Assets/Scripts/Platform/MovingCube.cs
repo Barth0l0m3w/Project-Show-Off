@@ -42,23 +42,6 @@ public class MovingCube : MonoBehaviour
 
     private float currentSpeed = 0;
 
-    //testing sake commands
-    /*private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            GameManager.Instance._xrKnob.value = FREEFALL;
-        }
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            GameManager.Instance._xrKnob.value = CRUISE;
-        }
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            GameManager.Instance._xrKnob.value = STOP;
-        }
-    }*/
-
     // These should be removed when the level is more established
     void Start()
     {
@@ -99,13 +82,12 @@ public class MovingCube : MonoBehaviour
         transform.position = newPosition;
     }
 
-    //TODO: Swap out OnTriggerEnter to avoid relying on RigidBody. Maybe use raw distance check
-    //OnTriggerEnters dependant on colliders and having Rigid bodies, but we don't use that for movement or physics
-    private void OnTriggerEnter(Collider other)
+    //done: Swap out OnTriggerEnter to avoid relying on RigidBody. Maybe use raw distance check
+    //OnTriggerEnters dependent on colliders and having Rigid bodies, but we don't use that for movement or physics
+    private void Update()
     {
-        if (other.CompareTag("EventTrigger"))
+        if (GameManager.Instance.face.transform.position.y <= -23)
         {
-            Destroy(other.gameObject);
             Debug.Log("Enter trigger area");
             GameManager.Instance._xrKnob.value = STOP;
         }

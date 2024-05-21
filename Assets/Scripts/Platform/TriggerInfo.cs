@@ -9,47 +9,58 @@ using UnityEngine.Serialization;
 public class TriggerInfo : MonoBehaviour
 {
     public MovingCube _platform;
-    
-    [Header("object Reference")]
+
+    [Header("object Reference")] 
     [SerializeField] private GameObject bats;
     [SerializeField] private GameObject rock;
-    
-    
-    [Header("Object Spawn Offset")]
-    [SerializeField] private Transform batsOffset;
+
+    [Header("Position Stops")] 
+    [SerializeField] private int CoordinateBats;
+    [SerializeField] private int CoordinateRock;
+    //private int CoordinateStop; //more when neccecery
+
+    [Header("Object Spawn Offset")] [SerializeField]
+    private Transform batsOffset;
+
     [SerializeField] private Transform rockOffset;
     
-    public enum TriggerType
-    {
-        BATS,
-        ROCK
-    }
+    private bool BatsStop;
+    private bool RocksStop;
 
-    [SerializeField] private TriggerType triggerType;
-
-    //TODO: Swap out OnTriggerEnter to avoid relying on RigidBody. Maybe use raw distance check
-    //OnTriggerEnters dependant on colliders and having Rigid bodies, but we don't use that for movement or physics
-    private void OnTriggerEnter(Collider other)
+    private void Update()
     {
-        if (other.CompareTag("Platform"))
+        if (GameManager.Instance.face.transform.position.y <= CoordinateBats)
         {
-            if (triggerType == TriggerType.BATS)
-            {
-                Debug.Log("release the bats");
-                Vector3 posBat = batsOffset.position;
-                Vector3 direction = (GameManager.Instance.face.transform.position - posBat).normalized;
-
-                Instantiate(bats, posBat, Quaternion.LookRotation(direction));
-            }
-
-            if (triggerType == TriggerType.ROCK)
-            {
-                Debug.Log("watch out for your head");
-                Vector3 posRock = GameManager.Instance.face.transform.position + rockOffset.position;
-                Instantiate(rock, posRock, Quaternion.identity);
-            }
+            ReleaseTheBat();
         }
 
-        Destroy(this);
+        if (GameManager.Instance.face.transform.position.y <= CoordinateRock)
+        {
+            ReleaseTheRocks();
+        }
+    }
+
+    private void ReleaseTheBat()
+    {
+        if (!BatsStop)
+        {
+            BatsStop = true;
+            Debug.Log("release the bats");
+            Vector3 posBat = batsOffset.position;
+            Vector3 direction = (GameManager.Instance.face.transform.position - posBat).normalized;
+
+            Instantiate(bats, posBat, Quaternion.LookRotation(direction));
+        }
+    }
+
+    private void ReleaseTheRocks()
+    {
+        if (!RocksStop)
+        {
+            RocksStop = true;
+            Debug.Log("watch out for your head");
+            Vector3 posRock = GameManager.Instance.face.transform.position + rockOffset.position;
+            Instantiate(rock, posRock, Quaternion.identity);
+        }
     }
 }
