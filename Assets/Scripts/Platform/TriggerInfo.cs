@@ -28,7 +28,7 @@ public class TriggerInfo : MonoBehaviour
     [SerializeField] private TriggerType triggerType;
 
     //TODO: Swap out OnTriggerEnter to avoid relying on RigidBody. Maybe use raw distance check
-    //OnTriggerEnter's dependant on colliders and having Rigidbodies, but we don't use that for movement or physics
+    //OnTriggerEnters dependant on colliders and having Rigid bodies, but we don't use that for movement or physics
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Platform"))

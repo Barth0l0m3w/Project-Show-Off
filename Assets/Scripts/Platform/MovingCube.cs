@@ -42,7 +42,7 @@ public class MovingCube : MonoBehaviour
 
     private float currentSpeed = 0;
 
-    //testing sake keycomands
+    //testing sake commands
     /*private void Update()
     {
         if (Input.GetKeyDown(KeyCode.F))
@@ -100,7 +100,7 @@ public class MovingCube : MonoBehaviour
     }
 
     //TODO: Swap out OnTriggerEnter to avoid relying on RigidBody. Maybe use raw distance check
-    //OnTriggerEnter's dependant on colliders and having Rigidbodies, but we don't use that for movement or physics
+    //OnTriggerEnters dependant on colliders and having Rigid bodies, but we don't use that for movement or physics
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("EventTrigger"))
