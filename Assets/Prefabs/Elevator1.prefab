@@ -292,7 +292,7 @@ GameObject:
   - component: {fileID: 4979187719205176846}
   - component: {fileID: 4526939802262443084}
   m_Layer: 0
-  m_Name: Elevator
+  m_Name: Elevator1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
