@@ -13293,6 +13293,18 @@ PrefabInstance:
       propertyPath: triggerType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1001874403108433510, guid: 61c83246b5529d7498b9719f95f84ee6, type: 3}
+      propertyPath: CoordinateBats
+      value: -22
+      objectReference: {fileID: 0}
+    - target: {fileID: 1001874403108433510, guid: 61c83246b5529d7498b9719f95f84ee6, type: 3}
+      propertyPath: CoordinateRock
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1001874403108433510, guid: 61c83246b5529d7498b9719f95f84ee6, type: 3}
+      propertyPath: Coordinate1stStop
+      value: -20
+      objectReference: {fileID: 0}
     - target: {fileID: 5706066019461076501, guid: 61c83246b5529d7498b9719f95f84ee6, type: 3}
       propertyPath: m_Radius
       value: 1.3655092
