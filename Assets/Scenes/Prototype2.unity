@@ -14654,6 +14654,7 @@ MonoBehaviour:
   platform: {fileID: 3129280736990647786}
   _xrKnob: {fileID: 926149302}
   face: {fileID: 660116014}
+  stateToMoveInto: 0
 --- !u!4 &876114983
 Transform:
   m_ObjectHideFlags: 0
@@ -35684,6 +35685,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2507827602731083080, guid: 9066f48934ba0b345884dd46ea53d2fa, type: 3}
+      propertyPath: m_AngleIncrement
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2507827602731083080, guid: 9066f48934ba0b345884dd46ea53d2fa, type: 3}
+      propertyPath: m_OnValueChange.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2507827602731083080, guid: 9066f48934ba0b345884dd46ea53d2fa, type: 3}
       propertyPath: m_OnValueChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 876114982}
@@ -35723,6 +35732,10 @@ PrefabInstance:
       propertyPath: mp2
       value: 
       objectReference: {fileID: 1183974453}
+    - target: {fileID: 4526939802262443084, guid: 9066f48934ba0b345884dd46ea53d2fa, type: 3}
+      propertyPath: leverMovingPoint
+      value: 0.85
+      objectReference: {fileID: 0}
     - target: {fileID: 4526939802262443084, guid: 9066f48934ba0b345884dd46ea53d2fa, type: 3}
       propertyPath: stoppingDeceleration
       value: 8
