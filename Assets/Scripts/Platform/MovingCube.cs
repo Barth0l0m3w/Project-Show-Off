@@ -23,10 +23,16 @@ public class MovingCube : MonoBehaviour
 
     #region StateInfo
 
-    [HideInInspector] public float currentState;
-    private const float STOP = 0;
-    private const float CRUISE = 0.5f;
-    private const float FREEFALL = 1;
+    public float leverMovingPoint = 0.9f;
+    public enum ElevatorState
+    {
+        STOP,
+        CRUISE,
+        FREEFALL
+    }
+    [HideInInspector] public ElevatorState currentState;
+    [HideInInspector] public bool isMoving;
+    [HideInInspector] public bool hasEnteredFreeFall;
 
     #endregion
 
@@ -42,23 +48,6 @@ public class MovingCube : MonoBehaviour
 
     private float currentSpeed = 0;
 
-    //testing sake commands
-    /*private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            GameManager.Instance._xrKnob.value = FREEFALL;
-        }
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            GameManager.Instance._xrKnob.value = CRUISE;
-        }
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            GameManager.Instance._xrKnob.value = STOP;
-        }
-    }*/
-
     // These should be removed when the level is more established
     void Start()
     {
@@ -70,14 +59,18 @@ public class MovingCube : MonoBehaviour
     {
         switch (currentState)
         {
-            case STOP:
+            case ElevatorState.STOP:
                 ApplySpeed(stoppingDeceleration, 0);
+                isMoving = false;
+                hasEnteredFreeFall = false;
                 break;
-            case CRUISE:
+            case ElevatorState.CRUISE:
                 ApplySpeed(cruisingAcceleration, cruisingTopSpeed);
+                isMoving = true;
                 break;
-            case FREEFALL:
+            case ElevatorState.FREEFALL:
                 ApplySpeed(freefallAcceleration, freefallTopSpeed);
+                isMoving = true;
                 break;
         }
     }
@@ -107,7 +100,7 @@ public class MovingCube : MonoBehaviour
         {
             Destroy(other.gameObject);
             Debug.Log("Enter trigger area");
-            GameManager.Instance._xrKnob.value = STOP;
+            //GameManager.Instance._xrKnob.value = STOP;
         }
     }
 

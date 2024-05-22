@@ -8,11 +8,14 @@ public class GameManager : MonoBehaviour
 {
     public MovingCube platform;
     public XRKnob _xrKnob;
-    public static GameManager Instance;
-    private float value;
     public GameObject face;
+    public MovingCube.ElevatorState stateToMoveInto;
+    
+    public static GameManager Instance;
 
-
+    private float value;
+    
+    
     void Awake()
     {
         if (Instance == null)
@@ -28,7 +31,7 @@ public class GameManager : MonoBehaviour
     
     void Start()
     {
-        SetValue();
+        SetValue(_xrKnob.value);
     }
 
     //TODO: Remove later as it doesn't show up on VR screen
@@ -39,15 +42,28 @@ public class GameManager : MonoBehaviour
     }
     #endif
 
-
-    public void SetValue()
+    public void SetValue(float pValue)
     {
-        value = _xrKnob.value;
+        value = pValue;
+        if (value < platform.leverMovingPoint)
+        {
+            platform.currentState = MovingCube.ElevatorState.STOP;
+        }
+        else
+        {
+            platform.currentState = stateToMoveInto;
+        }
     }
-    
 
     void Update()
     {
-        platform.currentState = value;
+        if (platform.hasEnteredFreeFall)
+        {
+            stateToMoveInto = MovingCube.ElevatorState.FREEFALL;
+        }
+        else
+        {
+            stateToMoveInto = MovingCube.ElevatorState.CRUISE;
+        }
     }
 }
