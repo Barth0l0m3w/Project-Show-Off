@@ -82,8 +82,7 @@ public class MovingCube : MonoBehaviour
         transform.position = newPosition;
     }
 
-    //done: Swap out OnTriggerEnter to avoid relying on RigidBody. Maybe use raw distance check
-    //OnTriggerEnters dependent on colliders and having Rigid bodies, but we don't use that for movement or physics
+    //todo: get the stop information from Trigger and not here
     private void Update()
     {
         if (GameManager.Instance.face.transform.position.y <= -23)
