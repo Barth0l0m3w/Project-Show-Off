@@ -92,13 +92,11 @@ public class MovingCube : MonoBehaviour
         transform.position = newPosition;
     }
 
-    //TODO: Swap out OnTriggerEnter to avoid relying on RigidBody. Maybe use raw distance check
-    //OnTriggerEnters dependant on colliders and having Rigid bodies, but we don't use that for movement or physics
-    private void OnTriggerEnter(Collider other)
+    //todo: get the stop information from Trigger and not here
+    private void Update()
     {
-        if (other.CompareTag("EventTrigger"))
+        if (GameManager.Instance.face.transform.position.y <= -23)
         {
-            Destroy(other.gameObject);
             Debug.Log("Enter trigger area");
             //GameManager.Instance._xrKnob.value = STOP;
         }
