@@ -11,6 +11,7 @@ public class TriggerInfo : MonoBehaviour
     private void Start()
     {
         _distance = this.transform.position.y;
+        
     }
 
     private void Update()

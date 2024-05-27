@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Udar.SceneManager;
 using Unity.VRTemplate;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,11 +12,12 @@ public class GameManager : MonoBehaviour
     public XRKnob _xrKnob;
     public GameObject face;
     public MovingCube.ElevatorState stateToMoveInto;
+    [SerializeField] private SceneField sceneToLoad;
     
     public static GameManager Instance;
 
     private float value;
-    
+    private AsyncOperation _asyncOperation;
     
     void Awake()
     {
@@ -26,21 +29,34 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this);
         }
+        SceneManager.sceneLoaded += OnSceneLoaded;
         
     }
-    
-    void Start()
+
+    private void OnEnable()
     {
-        SetValue(_xrKnob.value);
+        //SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    //TODO: Remove later as it doesn't show up on VR screen
-    #if UNITY_EDITOR
-    private void OnGUI()
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        GUI.Label(new Rect(new Vector2(0,0), new Vector2(200, 200)), "The value is: " + value);
+        Debug.Log("OnSceneLoaded called in scene: " + scene.name);
+        Debug.Log("Knob value in scene: " + scene.name + " is: " + _xrKnob.value);
+        Debug.Log("Moving into state: " + stateToMoveInto + " in scene: " + scene.name);
+        SetValue(_xrKnob.value);
+        Debug.Log("After setting the value, the current state is: " + platform.currentState + " in scene: " + scene.name);
     }
-    #endif
+
+    // private void OnDisable()
+    // {
+    //     SceneManager.sceneLoaded -= OnSceneLoaded;
+    // }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+    
 
     public void SetValue(float pValue)
     {
@@ -65,5 +81,29 @@ public class GameManager : MonoBehaviour
         {
             stateToMoveInto = MovingCube.ElevatorState.CRUISE;
         }
+    }
+
+    private IEnumerator LoadSceneASyncProcess()
+    {
+        this._asyncOperation = SceneManager.LoadSceneAsync(sceneToLoad.Name);
+
+        this._asyncOperation.allowSceneActivation = false;
+
+        while (!this._asyncOperation.isDone)
+        {
+            Debug.Log($"[scene]: {sceneToLoad.Name} [load progress]: {this._asyncOperation.progress}");
+
+            yield return null;
+        }
+    }
+    
+    public void PreloadScene()
+    {
+        this.StartCoroutine(LoadSceneASyncProcess());
+    }
+    
+    public void LoadPreloadedScene()
+    {
+        this._asyncOperation.allowSceneActivation = true;
     }
 }
