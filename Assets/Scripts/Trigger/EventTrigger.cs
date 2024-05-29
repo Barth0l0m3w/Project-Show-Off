@@ -8,12 +8,13 @@ public class EventTrigger : MonoBehaviour
     
     private void Start()
     {
-        Debug.Log("subscribing BatTrigger");
-        GameEvents.current.OnBatTriggerEnter += BatTrigger;
+        Debug.Log("subscribing AnimTrigger");
+        GameEvents.current.OnAnimTriggerEnter += AnimTrigger;
     }
     
-    private void BatTrigger()
+    private void AnimTrigger()
     {
+        if(anim == null) return;
         PlayAnimation(2);
         Debug.Log("play 1st anim from this player");
     }
@@ -25,6 +26,6 @@ public class EventTrigger : MonoBehaviour
 
     private void OnDestroy()
     {
-        GameEvents.current.OnBatTriggerEnter -= BatTrigger;
+        GameEvents.current.OnAnimTriggerEnter -= AnimTrigger;
     }
 }

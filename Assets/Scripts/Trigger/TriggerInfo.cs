@@ -7,10 +7,23 @@ using UnityEngine;
 public class TriggerInfo : MonoBehaviour
 {
     private bool _hasTriggered;
+    
+    public enum TypeEvent
+    {
+        Stop,
+        FreeFall,
+        CheckPoint,
+        SoundEffect,
+    }
+
+    private void Start()
+    {
+        TypeEvent typeEvent;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (_hasTriggered) return;
+        if (_hasTriggered) return; //flag
 
         OnEnter();
     }
@@ -19,7 +32,7 @@ public class TriggerInfo : MonoBehaviour
     {
         _hasTriggered = true;
 
-        GameEvents.current.BatTriggerEnter();
+        GameEvents.current.AnimTriggerEnter();
         
         Destroy(this.GameObject());
     }

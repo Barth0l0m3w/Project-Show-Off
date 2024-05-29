@@ -52,7 +52,7 @@ public class MovingCube : MonoBehaviour
     {
         p2 = mp2.position;
         currentTarget = p2;
-        GameEvents.current.OnBatTriggerEnter += TriggerEnter;
+        GameEvents.current.OnAnimTriggerEnter += TriggerEnter;
     }
 
     void MoveLift()
@@ -123,6 +123,6 @@ public class MovingCube : MonoBehaviour
 
     private void OnDestroy()
     {
-        GameEvents.current.OnBatTriggerEnter -= TriggerEnter;
+        GameEvents.current.OnAnimTriggerEnter -= TriggerEnter;
     }
 }

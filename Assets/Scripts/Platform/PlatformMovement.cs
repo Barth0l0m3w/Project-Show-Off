@@ -14,7 +14,7 @@ public class PlatformMovement : MonoBehaviour
     void Start()
     {
         _acceleration.y -= speed;
-        GameEvents.current.OnBatTriggerEnter += TriggerEnter;
+        GameEvents.current.OnAnimTriggerEnter += TriggerEnter;
     }
 
     // Update is called once per frame
@@ -41,6 +41,6 @@ public class PlatformMovement : MonoBehaviour
     
     private void OnDestroy()
     {
-        GameEvents.current.OnBatTriggerEnter -= TriggerEnter;
+        GameEvents.current.OnAnimTriggerEnter -= TriggerEnter;
     }
 }

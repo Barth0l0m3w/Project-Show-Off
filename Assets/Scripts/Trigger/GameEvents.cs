@@ -6,6 +6,7 @@ using UnityEngine;
 public class GameEvents : MonoBehaviour
 {
     public static GameEvents current;
+    
 
     private void Awake()
     {
@@ -13,17 +14,17 @@ public class GameEvents : MonoBehaviour
     }
 
 
-    public event Action OnBatTriggerEnter;
+    public event Action OnAnimTriggerEnter;
 
-    public void BatTriggerEnter()
+    public void AnimTriggerEnter()
     {
-        if (OnBatTriggerEnter != null)
+        if (OnAnimTriggerEnter != null)
         {
-            OnBatTriggerEnter();
+            OnAnimTriggerEnter();
         }
         else
         {
-            Debug.LogWarning("No subscribers to OnBatTriggerEnter");
+            Debug.LogWarning("No subscribers to OnAnimTriggerEnter");
         }
     }
 }
