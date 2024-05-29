@@ -688,6 +688,10 @@ PrefabInstance:
       propertyPath: mp2
       value: 
       objectReference: {fileID: 1514337015}
+    - target: {fileID: 3520343921438452887, guid: 9066f48934ba0b345884dd46ea53d2fa, type: 3}
+      propertyPath: cruisingTopSpeed
+      value: 4.7
+      objectReference: {fileID: 0}
     - target: {fileID: 5755455245101695464, guid: 9066f48934ba0b345884dd46ea53d2fa, type: 3}
       propertyPath: m_Name
       value: ElevatorMain
