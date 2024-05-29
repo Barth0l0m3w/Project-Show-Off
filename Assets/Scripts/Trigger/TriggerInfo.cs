@@ -2,33 +2,38 @@ using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
+
+//triggering 
 public class TriggerInfo : MonoBehaviour
 {
-    //[SerializeField] private SOTrigger soTrigger;
-    private float _distance;
-    public Animator anim;
+    private bool _hasTriggered;
+    
+    public enum TypeEvent
+    {
+        Stop,
+        FreeFall,
+        CheckPoint,
+        SoundEffect,
+    }
 
     private void Start()
     {
-        _distance = this.transform.position.y;
-        
+        TypeEvent typeEvent;
     }
 
-    private void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        if (GameManager.Instance.face.transform.position.y <= _distance)
-        {
-            try
-            {
-                Debug.Log("start Anim");
-                anim.Play("BatFlight");
-            }
-            catch
-            {
-                Console.WriteLine("No animation linked");
-                throw;
-            }
-            //todo: make sure that the elevator can stop from here without linking more stuff
-        }
+        if (_hasTriggered) return; //flag
+
+        OnEnter();
+    }
+
+    private void OnEnter()
+    {
+        _hasTriggered = true;
+
+        GameEvents.current.AnimTriggerEnter();
+        
+        Destroy(this.GameObject());
     }
 }

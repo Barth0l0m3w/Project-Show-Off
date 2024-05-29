@@ -18,18 +18,17 @@ public class MovingCube : MonoBehaviour
 
     #endregion
 
-    //TODO: Move this whole logic on TriggerInfo
-    
-
     #region StateInfo
 
     public float leverMovingPoint = 0.9f;
+
     public enum ElevatorState
     {
         STOP,
         CRUISE,
         FREEFALL
     }
+
     [HideInInspector] public ElevatorState currentState;
     [HideInInspector] public bool isMoving;
     [HideInInspector] public bool hasEnteredFreeFall;
@@ -53,7 +52,7 @@ public class MovingCube : MonoBehaviour
     {
         p2 = mp2.position;
         currentTarget = p2;
-        
+        GameEvents.current.OnAnimTriggerEnter += TriggerEnter;
     }
 
     void MoveLift()
@@ -93,18 +92,37 @@ public class MovingCube : MonoBehaviour
         transform.position = newPosition;
     }
 
-    //todo: get the stop information from Trigger and not here
-    private void Update()
+    /*private void Update()
     {
-        if (GameManager.Instance.face.transform.position.y <= -23)
+        if (!_stop)
         {
-            //Debug.Log("Enter trigger area");
-            //GameManager.Instance._xrKnob.value = STOP;
+            if (GameManager.Instance.face.transform.position.y == -71.7f)
+            {
+                Debug.Log("Enter trigger area");
+                GameManager.Instance._xrKnob.value = 0.09f;
+                _stop = true;
+            }
+
+            if (GameManager.Instance.face.transform.position.y <= -72f)
+            {
+                _stop = false;
+            }
         }
+    }*/
+
+    private void TriggerEnter()
+    {
+        Debug.Log("Enter trigger area");
+        GameManager.Instance._xrKnob.value = 0.09f;
     }
 
     void FixedUpdate()
     {
         MoveLift();
+    }
+
+    private void OnDestroy()
+    {
+        GameEvents.current.OnAnimTriggerEnter -= TriggerEnter;
     }
 }
