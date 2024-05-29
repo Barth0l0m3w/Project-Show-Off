@@ -2387,7 +2387,7 @@ MonoBehaviour:
   cruisingAcceleration: 0.75
   freefallTopSpeed: 4.9
   freefallAcceleration: 2.7
-  leverMovingPoint: 0.9
+  leverMovingPoint: 0.75
   currentState: 0
   isMoving: 0
   hasEnteredFreeFall: 0
