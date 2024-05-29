@@ -15,6 +15,7 @@ public class GameEvents : MonoBehaviour
 
 
     public event Action OnAnimTriggerEnter;
+    public event Action OnDestroyEnter;
 
     public void AnimTriggerEnter()
     {
@@ -26,5 +27,12 @@ public class GameEvents : MonoBehaviour
         {
             Debug.LogWarning("No subscribers to OnAnimTriggerEnter");
         }
+    }
+
+    
+    
+    private void OnDestroy()
+    {
+        if(OnDestroyEnter != null) OnDestroyEnter();
     }
 }

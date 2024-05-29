@@ -53,6 +53,7 @@ public class MovingCube : MonoBehaviour
         p2 = mp2.position;
         currentTarget = p2;
         GameEvents.current.OnAnimTriggerEnter += TriggerEnter;
+        GameEvents.current.OnDestroyEnter += StopListening;
     }
 
     void MoveLift()
@@ -116,6 +117,12 @@ public class MovingCube : MonoBehaviour
         GameManager.Instance._xrKnob.value = 0.09f;
     }
 
+    private void StopListening()
+    {
+        GameEvents.current.OnAnimTriggerEnter -= TriggerEnter;
+        GameEvents.current.OnDestroyEnter -= StopListening;
+    }
+    
     void FixedUpdate()
     {
         MoveLift();
