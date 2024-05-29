@@ -53,6 +53,7 @@ public class MovingCube : MonoBehaviour
     {
         p2 = mp2.position;
         currentTarget = p2;
+        
     }
 
     void MoveLift()
@@ -97,7 +98,7 @@ public class MovingCube : MonoBehaviour
     {
         if (GameManager.Instance.face.transform.position.y <= -23)
         {
-            Debug.Log("Enter trigger area");
+            //Debug.Log("Enter trigger area");
             //GameManager.Instance._xrKnob.value = STOP;
         }
     }
