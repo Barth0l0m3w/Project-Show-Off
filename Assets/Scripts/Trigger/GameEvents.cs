@@ -6,7 +6,7 @@ using UnityEngine;
 public class GameEvents : MonoBehaviour
 {
     public static GameEvents current;
-    
+
 
     private void Awake()
     {
@@ -25,6 +25,20 @@ public class GameEvents : MonoBehaviour
         else
         {
             Debug.LogWarning("No subscribers to OnAnimTriggerEnter");
+        }
+    }
+
+    public event Action Sounds;
+
+    public void SoundTrigger()
+    {
+        if (Sounds != null)
+        {
+            Sounds();
+        }
+        else
+        {
+            Debug.LogWarning("no Subscribers on Sounds");
         }
     }
 }

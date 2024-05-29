@@ -1,13 +1,15 @@
 using System;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 
 //triggering 
 public class TriggerInfo : MonoBehaviour
 {
     private bool _hasTriggered;
-    
+
+
     public enum TypeEvent
     {
         Stop,
@@ -15,6 +17,8 @@ public class TriggerInfo : MonoBehaviour
         CheckPoint,
         SoundEffect,
     }
+
+    public TypeEvent typeEvent;
 
     private void Start()
     {
@@ -31,9 +35,28 @@ public class TriggerInfo : MonoBehaviour
     private void OnEnter()
     {
         _hasTriggered = true;
-
-        GameEvents.current.AnimTriggerEnter();
         
+        if (typeEvent == TypeEvent.Stop)
+        {
+            Stop();
+        }
+
+        if (typeEvent == TypeEvent.FreeFall)
+        {
+            FreeFall();
+        }
+
         Destroy(this.GameObject());
+    }
+
+    private void FreeFall()
+    {
+        GameManager.Instance.stateToMoveInto = MovingCube.ElevatorState.FREEFALL;
+        GameManager.Instance.SetValue(1);
+    }
+
+    private void Stop()
+    {
+        GameEvents.current.AnimTriggerEnter();
     }
 }
