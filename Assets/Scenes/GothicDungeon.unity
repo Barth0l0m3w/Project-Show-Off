@@ -667,7 +667,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 645677732423335733, guid: 9066f48934ba0b345884dd46ea53d2fa, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.001546222
+      value: 0.0049357302
       objectReference: {fileID: 0}
     - target: {fileID: 915018313736933662, guid: 9066f48934ba0b345884dd46ea53d2fa, type: 3}
       propertyPath: m_AnchorMax.y
@@ -780,6 +780,14 @@ PrefabInstance:
     - target: {fileID: 5755455245101695464, guid: 9066f48934ba0b345884dd46ea53d2fa, type: 3}
       propertyPath: m_Name
       value: ElevatorMain
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775874350857305650, guid: 9066f48934ba0b345884dd46ea53d2fa, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775874350857305650, guid: 9066f48934ba0b345884dd46ea53d2fa, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6142261424907524507, guid: 9066f48934ba0b345884dd46ea53d2fa, type: 3}
       propertyPath: m_Value

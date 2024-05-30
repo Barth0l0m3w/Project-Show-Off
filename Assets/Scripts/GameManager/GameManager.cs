@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public XRKnob _xrKnob;
     public GameObject face;
     public MovingCube.ElevatorState stateToMoveInto;
-    [SerializeField] private SceneField sceneToLoad;
+    public SceneField sceneToLoad;
     
     public static GameManager Instance;
 
@@ -40,11 +40,11 @@ public class GameManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log("OnSceneLoaded called in scene: " + scene.name);
-        Debug.Log("Knob value in scene: " + scene.name + " is: " + _xrKnob.value);
-        Debug.Log("Moving into state: " + stateToMoveInto + " in scene: " + scene.name);
+        //Debug.Log("OnSceneLoaded called in scene: " + scene.name);
+        //Debug.Log("Knob value in scene: " + scene.name + " is: " + _xrKnob.value);
+        //Debug.Log("Moving into state: " + stateToMoveInto + " in scene: " + scene.name);
         SetValue(_xrKnob.value);
-        Debug.Log("After setting the value, the current state is: " + platform.currentState + " in scene: " + scene.name);
+        //Debug.Log("After setting the value, the current state is: " + platform.currentState + " in scene: " + scene.name);
     }
 
     // private void OnDisable()
