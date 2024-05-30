@@ -36569,6 +36569,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TriggerEvent
       objectReference: {fileID: 0}
+    - target: {fileID: 1354232235812008490, guid: b85a112824f99134f911320db843f2af, type: 3}
+      propertyPath: typeEvent
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6390591515908370553, guid: b85a112824f99134f911320db843f2af, type: 3}
       propertyPath: anim
       value: 
