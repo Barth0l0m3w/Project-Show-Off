@@ -106,4 +106,14 @@ public class GameManager : MonoBehaviour
     {
         this._asyncOperation.allowSceneActivation = true;
     }
+
+    public void ReloadCurrentScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void LoadSpecificScene()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
