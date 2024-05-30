@@ -15,6 +15,7 @@ public class GameEvents : MonoBehaviour
 
 
     public event Action OnAnimTriggerEnter;
+    public event Action OnDestroyEnter;
 
     public void AnimTriggerEnter()
     {
@@ -40,5 +41,12 @@ public class GameEvents : MonoBehaviour
         {
             Debug.LogWarning("no Subscribers on Sounds");
         }
+    }
+
+    
+    
+    private void OnDestroy()
+    {
+        if(OnDestroyEnter != null) OnDestroyEnter();
     }
 }
