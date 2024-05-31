@@ -63,7 +63,12 @@ public class MovingCube : MonoBehaviour
             case ElevatorState.STOP:
                 ApplySpeed(stoppingDeceleration, 0);
                 isMoving = false;
-                hasEnteredFreeFall = false;
+                if (hasEnteredFreeFall)
+                {
+                    hasEnteredFreeFall = false;
+                    GameEvents.current.StopFreefall();
+                }
+                
                 break;
             case ElevatorState.CRUISE:
                 ApplySpeed(cruisingAcceleration, cruisingTopSpeed);

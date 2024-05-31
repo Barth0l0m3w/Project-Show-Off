@@ -16,6 +16,7 @@ public class GameEvents : MonoBehaviour
 
     public event Action OnAnimTriggerEnter;
     public event Action OnDestroyEnter;
+    public event Action OnFreefallStop;
 
     public void AnimTriggerEnter()
     {
@@ -43,7 +44,11 @@ public class GameEvents : MonoBehaviour
         }
     }
 
-    
+    public void StopFreefall()
+    {
+        if(OnFreefallStop != null) OnFreefallStop();
+        
+    }
     
     private void OnDestroy()
     {

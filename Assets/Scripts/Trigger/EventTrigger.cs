@@ -8,7 +8,7 @@ public class EventTrigger : MonoBehaviour
     
     private void Start()
     {
-        Debug.Log("subscribing AnimTrigger");
+        //Debug.Log("subscribing AnimTrigger");
         GameEvents.current.OnAnimTriggerEnter += AnimTrigger;
     }
     
