@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
 {
     public MovingCube platform;
     public XRKnob _xrKnob;
-    public GameObject face;
+    //public GameObject face;
     public MovingCube.ElevatorState stateToMoveInto;
     public SceneField sceneToLoad;
     
