@@ -83,6 +83,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    //Source: https://gamedev.stackexchange.com/questions/185528/preload-scene-in-unity
     private IEnumerator LoadSceneASyncProcess()
     {
         this._asyncOperation = SceneManager.LoadSceneAsync(sceneToLoad.Name);
@@ -115,5 +116,10 @@ public class GameManager : MonoBehaviour
     public void LoadSpecificScene()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void LoadSpecificScene(int sceneIndex)
+    {
+        SceneManager.LoadScene(sceneIndex);
     }
 }
