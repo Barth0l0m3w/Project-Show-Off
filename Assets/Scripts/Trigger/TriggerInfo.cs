@@ -1,20 +1,15 @@
-using System;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Serialization;
+using NaughtyAttributes;
 
-
-//triggering 
 public class TriggerInfo : MonoBehaviour
 {
     private bool _hasTriggered;
-
 
     public enum TypeEvent
     {
         Stop,
         FreeFall,
-        CheckPoint,
         SoundEffect,
     }
 
@@ -28,35 +23,30 @@ public class TriggerInfo : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (_hasTriggered) return; //flag
-
         OnEnter();
     }
-
+    
+    [Button]
     private void OnEnter()
     {
         _hasTriggered = true;
-        
+
         if (typeEvent == TypeEvent.Stop)
         {
-            Stop();
+            GameEvents.current.AnimTriggerEnter();
         }
 
         if (typeEvent == TypeEvent.FreeFall)
         {
-            FreeFall();
+            GameManager.Instance.stateToMoveInto = MovingCube.ElevatorState.FREEFALL;
+            GameManager.Instance.SetValue(1);
+        }
+
+        if (typeEvent == TypeEvent.SoundEffect)
+        {
+            GameEvents.current.OnSoundTriggerEnter();
         }
 
         Destroy(this.GameObject());
-    }
-
-    private void FreeFall()
-    {
-        GameManager.Instance.stateToMoveInto = MovingCube.ElevatorState.FREEFALL;
-        GameManager.Instance.SetValue(1);
-    }
-
-    private void Stop()
-    {
-        GameEvents.current.AnimTriggerEnter();
     }
 }

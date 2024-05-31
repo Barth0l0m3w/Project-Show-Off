@@ -12,11 +12,8 @@ public class GameEvents : MonoBehaviour
     {
         current = this;
     }
-
-
+    
     public event Action OnAnimTriggerEnter;
-    public event Action OnDestroyEnter;
-
     public void AnimTriggerEnter()
     {
         if (OnAnimTriggerEnter != null)
@@ -29,13 +26,12 @@ public class GameEvents : MonoBehaviour
         }
     }
 
-    public event Action Sounds;
-
-    public void SoundTrigger()
+    public event Action OnSoundTrigger;
+    public void OnSoundTriggerEnter()
     {
-        if (Sounds != null)
+        if (OnSoundTrigger != null)
         {
-            Sounds();
+            OnSoundTrigger();
         }
         else
         {
@@ -43,10 +39,16 @@ public class GameEvents : MonoBehaviour
         }
     }
 
-    
-    
+    public event Action OnDestroyEnter;
     private void OnDestroy()
     {
-        if(OnDestroyEnter != null) OnDestroyEnter();
+        if (OnDestroyEnter != null)
+        {
+            OnDestroyEnter();
+        }
+        else
+        {
+            Debug.LogWarning("no Subscribers on Destroy");
+        }
     }
 }
