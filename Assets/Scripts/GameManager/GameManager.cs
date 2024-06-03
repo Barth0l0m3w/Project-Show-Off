@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
 
     private float value;
     private AsyncOperation _asyncOperation;
+    private HapticSignal haptics;
     
     void Awake()
     {
@@ -121,5 +122,15 @@ public class GameManager : MonoBehaviour
     public void LoadSpecificScene(int sceneIndex)
     {
         SceneManager.LoadScene(sceneIndex);
+    }
+
+    public void TriggerHaptics()
+    {
+        haptics.TriggerHaptics();
+    }
+
+    public void TriggerHaptics(float intensity, float duration)
+    {
+        haptics.TriggerHaptics(intensity, duration);
     }
 }
