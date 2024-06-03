@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8352304849982300864}
   - component: {fileID: 6390591515908370553}
+  - component: {fileID: 4937210911712854599}
   m_Layer: 0
   m_Name: TriggerEvent
   m_TagString: Untagged
@@ -46,6 +47,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
+  sequenceNmbr: 2
+--- !u!114 &4937210911712854599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409110007919626275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 670ecd8c824bf134b9923efb1601c131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <eventPath>k__BackingField:
+    Guid:
+      Data1: 947965712
+      Data2: 1226862778
+      Data3: -419002723
+      Data4: 793040649
+    Path: event:/Bats
+  soundorigin: {fileID: 0}
 --- !u!1 &7595641884621697238
 GameObject:
   m_ObjectHideFlags: 0
