@@ -10,9 +10,9 @@ public class GameManager : MonoBehaviour
 {
     public MovingCube platform;
     public XRKnob _xrKnob;
-    public GameObject face;
+    //public GameObject face;
     public MovingCube.ElevatorState stateToMoveInto;
-    [SerializeField] private SceneField sceneToLoad;
+    public SceneField sceneToLoad;
     
     public static GameManager Instance;
 
@@ -40,11 +40,11 @@ public class GameManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log("OnSceneLoaded called in scene: " + scene.name);
-        Debug.Log("Knob value in scene: " + scene.name + " is: " + _xrKnob.value);
-        Debug.Log("Moving into state: " + stateToMoveInto + " in scene: " + scene.name);
+        //Debug.Log("OnSceneLoaded called in scene: " + scene.name);
+        //Debug.Log("Knob value in scene: " + scene.name + " is: " + _xrKnob.value);
+        //Debug.Log("Moving into state: " + stateToMoveInto + " in scene: " + scene.name);
         SetValue(_xrKnob.value);
-        Debug.Log("After setting the value, the current state is: " + platform.currentState + " in scene: " + scene.name);
+        //Debug.Log("After setting the value, the current state is: " + platform.currentState + " in scene: " + scene.name);
     }
 
     // private void OnDisable()
@@ -83,6 +83,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    //Source: https://gamedev.stackexchange.com/questions/185528/preload-scene-in-unity
     private IEnumerator LoadSceneASyncProcess()
     {
         this._asyncOperation = SceneManager.LoadSceneAsync(sceneToLoad.Name);
@@ -105,5 +106,20 @@ public class GameManager : MonoBehaviour
     public void LoadPreloadedScene()
     {
         this._asyncOperation.allowSceneActivation = true;
+    }
+
+    public void ReloadCurrentScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void LoadSpecificScene()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void LoadSpecificScene(int sceneIndex)
+    {
+        SceneManager.LoadScene(sceneIndex);
     }
 }

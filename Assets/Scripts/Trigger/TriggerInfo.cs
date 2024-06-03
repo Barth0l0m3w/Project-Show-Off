@@ -52,6 +52,7 @@ public class TriggerInfo : MonoBehaviour
     private void FreeFall()
     {
         GameManager.Instance.stateToMoveInto = MovingCube.ElevatorState.FREEFALL;
+        GameManager.Instance.platform.hasEnteredFreeFall = true;
         GameManager.Instance.SetValue(1);
     }
 
