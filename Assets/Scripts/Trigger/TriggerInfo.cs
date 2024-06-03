@@ -1,10 +1,12 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using NaughtyAttributes;
+using UnityEngine.Serialization;
 
 public class TriggerInfo : MonoBehaviour
 {
     private bool _hasTriggered;
+    
 
     public enum TypeEvent
     {
@@ -46,7 +48,7 @@ public class TriggerInfo : MonoBehaviour
         {
             GameEvents.current.OnSoundTriggerEnter();
         }
-
+        
         Destroy(this.GameObject());
     }
 
