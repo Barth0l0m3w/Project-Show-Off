@@ -4860,7 +4860,7 @@ PrefabInstance:
       objectReference: {fileID: 2010378614}
     - target: {fileID: 3520343921438452887, guid: 9066f48934ba0b345884dd46ea53d2fa, type: 3}
       propertyPath: cruisingTopSpeed
-      value: 4.7
+      value: 5.3
       objectReference: {fileID: 0}
     - target: {fileID: 3520343921438452887, guid: 9066f48934ba0b345884dd46ea53d2fa, type: 3}
       propertyPath: stoppingDeceleration
@@ -11042,6 +11042,10 @@ PrefabInstance:
       propertyPath: platform
       value: 
       objectReference: {fileID: 260548056}
+    - target: {fileID: 4038817374262971502, guid: 00c66a8770228af48a4a71001f6c1f3a, type: 3}
+      propertyPath: fadeScreen
+      value: 
+      objectReference: {fileID: 260548054}
     - target: {fileID: 4038817374262971502, guid: 00c66a8770228af48a4a71001f6c1f3a, type: 3}
       propertyPath: stateToMoveInto
       value: 0
