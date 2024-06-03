@@ -12,10 +12,9 @@ public class GameEvents : MonoBehaviour
     {
         current = this;
     }
-    
+
     public event Action OnAnimTriggerEnter;
-    public event Action OnDestroyEnter;
-    public event Action OnFreefallStop;
+
 
     public void AnimTriggerEnter()
     {
@@ -30,6 +29,7 @@ public class GameEvents : MonoBehaviour
     }
 
     public event Action OnSoundTrigger;
+
     public void OnSoundTriggerEnter()
     {
         if (OnSoundTrigger != null)
@@ -42,12 +42,13 @@ public class GameEvents : MonoBehaviour
         }
     }
 
+    public event Action OnFreefallStop;
+
     public void StopFreefall()
     {
-        if(OnFreefallStop != null) OnFreefallStop();
-        
+        if (OnFreefallStop != null) OnFreefallStop();
     }
-    
+
     public event Action OnDestroyEnter;
     private void OnDestroy()
     {
