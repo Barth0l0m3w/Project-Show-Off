@@ -16,6 +16,7 @@ public class EventTrigger : MonoBehaviour
     {
         if(anim == null) return;
         PlayAnimation(2);
+        GameManager.Instance.TriggerHaptics(0.7f, anim.GetCurrentAnimatorClipInfo(0).Length);
         Debug.Log("play 1st anim from this player");
     }
 

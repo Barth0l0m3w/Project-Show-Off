@@ -46,6 +46,21 @@ public class MovingCube : MonoBehaviour
     #endregion
 
     private float currentSpeed = 0;
+    private static MovingCube Instance;
+    
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else if (Instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        DontDestroyOnLoad(gameObject);
+        
+    }
 
     // These should be removed when the level is more established
     void Start()
@@ -63,6 +78,10 @@ public class MovingCube : MonoBehaviour
             case ElevatorState.STOP:
                 ApplySpeed(stoppingDeceleration, 0);
                 isMoving = false;
+                if (currentSpeed > 0)
+                {
+                    StartCoroutine(GameManager.Instance.TriggerHaptics(1f, 0.1f, 0.1f));
+                }
                 if (hasEnteredFreeFall)
                 {
                     hasEnteredFreeFall = false;
@@ -76,6 +95,7 @@ public class MovingCube : MonoBehaviour
                 break;
             case ElevatorState.FREEFALL:
                 ApplySpeed(freefallAcceleration, freefallTopSpeed);
+                GameManager.Instance.TriggerHaptics(0.8f, 0.1f);
                 isMoving = true;
                 break;
         }

@@ -12,13 +12,19 @@ public class GameManager : MonoBehaviour
     public XRKnob _xrKnob;
     //public GameObject face;
     public MovingCube.ElevatorState stateToMoveInto;
-    public SceneField sceneToLoad;
+    //public SceneField sceneToLoad;
     
     public static GameManager Instance;
 
     private float value;
-    private AsyncOperation _asyncOperation;
+    //private AsyncOperation _asyncOperation;
     private HapticSignal haptics;
+    private bool isVibrating;
+
+    void Start()
+    {
+        haptics = GetComponent<HapticSignal>();
+    }
     
     void Awake()
     {
@@ -28,9 +34,9 @@ public class GameManager : MonoBehaviour
         }
         else if (Instance != this)
         {
-            Destroy(this);
+            Destroy(this.gameObject);
         }
-        SceneManager.sceneLoaded += OnSceneLoaded;
+        DontDestroyOnLoad(gameObject);
         
     }
 
@@ -39,24 +45,24 @@ public class GameManager : MonoBehaviour
         //SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        //Debug.Log("OnSceneLoaded called in scene: " + scene.name);
-        //Debug.Log("Knob value in scene: " + scene.name + " is: " + _xrKnob.value);
-        //Debug.Log("Moving into state: " + stateToMoveInto + " in scene: " + scene.name);
-        SetValue(_xrKnob.value);
-        //Debug.Log("After setting the value, the current state is: " + platform.currentState + " in scene: " + scene.name);
-    }
+    // void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    // {
+    //     //Debug.Log("OnSceneLoaded called in scene: " + scene.name);
+    //     //Debug.Log("Knob value in scene: " + scene.name + " is: " + _xrKnob.value);
+    //     //Debug.Log("Moving into state: " + stateToMoveInto + " in scene: " + scene.name);
+    //     SetValue(_xrKnob.value);
+    //     //Debug.Log("After setting the value, the current state is: " + platform.currentState + " in scene: " + scene.name);
+    // }
 
     // private void OnDisable()
     // {
     //     SceneManager.sceneLoaded -= OnSceneLoaded;
     // }
 
-    private void OnDestroy()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
+    // private void OnDestroy()
+    // {
+    //     SceneManager.sceneLoaded -= OnSceneLoaded;
+    // }
     
 
     public void SetValue(float pValue)
@@ -84,30 +90,30 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    //Source: https://gamedev.stackexchange.com/questions/185528/preload-scene-in-unity
-    private IEnumerator LoadSceneASyncProcess()
-    {
-        this._asyncOperation = SceneManager.LoadSceneAsync(sceneToLoad.Name);
-
-        this._asyncOperation.allowSceneActivation = false;
-
-        while (!this._asyncOperation.isDone)
-        {
-            Debug.Log($"[scene]: {sceneToLoad.Name} [load progress]: {this._asyncOperation.progress}");
-
-            yield return null;
-        }
-    }
-    
-    public void PreloadScene()
-    {
-        this.StartCoroutine(LoadSceneASyncProcess());
-    }
-    
-    public void LoadPreloadedScene()
-    {
-        this._asyncOperation.allowSceneActivation = true;
-    }
+    //
+    // private IEnumerator LoadSceneASyncProcess()
+    // {
+    //     this._asyncOperation = SceneManager.LoadSceneAsync(sceneToLoad.Name);
+    //
+    //     this._asyncOperation.allowSceneActivation = false;
+    //
+    //     while (!this._asyncOperation.isDone)
+    //     {
+    //         Debug.Log($"[scene]: {sceneToLoad.Name} [load progress]: {this._asyncOperation.progress}");
+    //
+    //         yield return null;
+    //     }
+    // }
+    //
+    // public void PreloadScene()
+    // {
+    //     this.StartCoroutine(LoadSceneASyncProcess());
+    // }
+    //
+    // public void LoadPreloadedScene()
+    // {
+    //     this._asyncOperation.allowSceneActivation = true;
+    // }
 
     public void ReloadCurrentScene()
     {
@@ -132,5 +138,17 @@ public class GameManager : MonoBehaviour
     public void TriggerHaptics(float intensity, float duration)
     {
         haptics.TriggerHaptics(intensity, duration);
+    }
+    
+    public IEnumerator TriggerHaptics(float inty, float dur, float spacing)
+    {
+        if (!isVibrating)
+        {
+            isVibrating = true;
+            haptics.TriggerHaptics(inty, dur);
+            yield return new WaitForSeconds(spacing);
+            isVibrating = false;
+        }
+        
     }
 }

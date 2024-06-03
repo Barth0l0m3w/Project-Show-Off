@@ -19,11 +19,11 @@ public class ScenePreloading : MonoBehaviour
         {
             if (LoadType == TypeOfSceneManagement.PRELOAD)
             {
-                GameManager.Instance.PreloadScene();
+                LevelLoader.Instance.PreloadScene();
             }
             else if (LoadType == TypeOfSceneManagement.LOAD)
             {
-                GameManager.Instance.LoadPreloadedScene();
+                LevelLoader.Instance.LoadPreloadedScene();
             }
         }
     }
