@@ -98,23 +98,6 @@ public class MovingCube : MonoBehaviour
         transform.position = newPosition;
     }
 
-    /*private void Update()
-    {
-        if (!_stop)
-        {
-            if (GameManager.Instance.face.transform.position.y == -71.7f)
-            {
-                Debug.Log("Enter trigger area");
-                GameManager.Instance._xrKnob.value = 0.09f;
-                _stop = true;
-            }
-
-            if (GameManager.Instance.face.transform.position.y <= -72f)
-            {
-                _stop = false;
-            }
-        }
-    }*/
 
     private void TriggerEnter()
     {
