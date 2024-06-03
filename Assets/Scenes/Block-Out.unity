@@ -17468,6 +17468,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platform: {fileID: 0}
   _xrKnob: {fileID: 0}
+  face: {fileID: 0}
   stateToMoveInto: 0
   sceneToLoad:
     _sceneOB: {fileID: 0}
