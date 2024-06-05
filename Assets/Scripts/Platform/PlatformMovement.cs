@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -14,7 +14,7 @@ public class PlatformMovement : MonoBehaviour
     void Start()
     {
         _acceleration.y -= speed;
-        GameEvents.current.OnAnimTriggerEnter += TriggerEnter;
+        GameEvents.current.OnAnimEnter += Enter;
     }
 
     // Update is called once per frame
@@ -23,7 +23,7 @@ public class PlatformMovement : MonoBehaviour
         this.transform.position += _acceleration;
     }
 
-    private void TriggerEnter()
+    private void Enter()
     {
         Stop();
         Debug.Log("elevator stoppped");
@@ -41,6 +41,6 @@ public class PlatformMovement : MonoBehaviour
     
     private void OnDestroy()
     {
-        GameEvents.current.OnAnimTriggerEnter -= TriggerEnter;
+        GameEvents.current.OnAnimEnter -= Enter;
     }
-}
+}*/

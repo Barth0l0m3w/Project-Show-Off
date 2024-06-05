@@ -12,7 +12,7 @@ public class FreefallCheck : MonoBehaviour
     
     private void Start()
     {
-        GameEvents.current.OnFreefallStop += SuccesfullStop;
+        GameEvents.current.OnFreefallStopTrigger += SuccesfullStopTrigger;
 
     }
 
@@ -22,7 +22,7 @@ public class FreefallCheck : MonoBehaviour
         
     }
 
-    void SuccesfullStop()
+    void SuccesfullStopTrigger()
     {
         if (replacesScene)
         {
@@ -33,6 +33,6 @@ public class FreefallCheck : MonoBehaviour
 
     private void OnDisable()
     {
-        GameEvents.current.OnFreefallStop -= SuccesfullStop;
+        GameEvents.current.OnFreefallStopTrigger -= SuccesfullStopTrigger;
     }
 }

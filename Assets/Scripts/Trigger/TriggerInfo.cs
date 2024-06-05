@@ -6,7 +6,7 @@ using UnityEngine.Serialization;
 public class TriggerInfo : MonoBehaviour
 {
     private bool _hasTriggered;
-    [SerializeField] private int soundId;
+    [SerializeField] private int triggerId;
 
     public enum TypeEvent
     {
@@ -27,7 +27,7 @@ public class TriggerInfo : MonoBehaviour
         if (_hasTriggered) return; //flag
         OnEnter();
     }
-    
+
     [Button]
     private void OnEnter()
     {
@@ -35,35 +35,39 @@ public class TriggerInfo : MonoBehaviour
 
         if (typeEvent == TypeEvent.Stop)
         {
-            GameEvents.current.AnimTriggerEnter();
-            GameEvents.current.OnSoundTriggerEnter(soundId);
+            GameEvents.current.AnimTriggerEnter(triggerId);
+            GameEvents.current.StateTriggerEnter();
+            GameEvents.current.SoundTriggerEnter(triggerId);
         }
 
         if (typeEvent == TypeEvent.FreeFall)
         {
             GameManager.Instance.stateToMoveInto = MovingCube.ElevatorState.FREEFALL;
+            GameManager.Instance.platform.hasEnteredFreeFall = true;
             GameManager.Instance.SetValue(1);
-            GameEvents.current.OnSoundTriggerEnter(soundId);
+            GameEvents.current.SoundTriggerEnter(triggerId);
         }
 
         if (typeEvent == TypeEvent.SoundEffect)
         {
-            GameEvents.current.OnSoundTriggerEnter(soundId);
+            GameEvents.current.SoundTriggerEnter(triggerId);
         }
-        
+
         Destroy(this.GameObject());
     }
 
-    private void FreeFall()
+    //todo: is this being used? 
+    /*private void FreeFall()
     {
         GameManager.Instance.stateToMoveInto = MovingCube.ElevatorState.FREEFALL;
         GameManager.Instance.platform.hasEnteredFreeFall = true;
         GameManager.Instance.SetValue(1);
-    }
+    }*/
 
+    //why is this here? its not being called, todo: cleanup
     private void Stop()
     {
-        GameEvents.current.AnimTriggerEnter();
-        GameEvents.current.OnSoundTriggerEnter(soundId);
+        GameEvents.current.AnimTriggerEnter(triggerId);
+        GameEvents.current.SoundTriggerEnter(triggerId);
     }
 }

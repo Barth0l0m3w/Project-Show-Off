@@ -7,7 +7,6 @@ public class GameEvents : MonoBehaviour
 {
     public static GameEvents current;
 
-
     private void Awake()
     {
         current = this;
@@ -24,23 +23,23 @@ public class GameEvents : MonoBehaviour
         }
     }
 
-    public event Action OnAnimTriggerEnter;
+    public event Action<int> OnAnimEnter;
 
-    public void AnimTriggerEnter()
+    public void AnimTriggerEnter(int id)
     {
-        if (OnAnimTriggerEnter != null)
+        if (OnAnimEnter != null)
         {
-            OnAnimTriggerEnter();
+            OnAnimEnter(id);
         }
         else
         {
-            Debug.LogWarning("No subscribers to OnAnimTriggerEnter");
+            Debug.LogWarning("No subscribers to OnAnimEnter");
         }
     }
 
     public event Action<int> OnSoundTrigger;
 
-    public void OnSoundTriggerEnter(int id)
+    public void SoundTriggerEnter(int id)
     {
         if (OnSoundTrigger != null)
         {
@@ -52,11 +51,18 @@ public class GameEvents : MonoBehaviour
         }
     }
 
-    public event Action OnFreefallStop;
+    public event Action OnFreefallStopTrigger;
 
-    public void StopFreefall()
+    public void OnStopFreefallEnter()
     {
-        if (OnFreefallStop != null) OnFreefallStop();
+        if (OnFreefallStopTrigger != null)
+        {
+            OnFreefallStopTrigger();
+        }
+        else
+        {
+            Debug.LogWarning("no Subscribers on Sounds");
+        }
     }
 
     public event Action OnDestroyEnter;
