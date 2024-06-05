@@ -1,25 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class EventTrigger : MonoBehaviour
 {
     public Animator anim;
-    private int _animNumber = 2;
+    [SerializeField] private int animId;
 
     private void Start()
     {
-        GameEvents.current.OnAnimTriggerEnter += AnimTrigger;
+        GameEvents.current.OnAnimEnter += Anim;
     }
 
-    private void AnimTrigger()
+    private void Anim(int id)
     {
         if (anim != null)
         {
-            PlayAnimation(_animNumber);
-            _animNumber++;
-            Debug.Log("play 1st anim from this player");
+            if (id == animId)
+            {
+                PlayAnimation(animId);
+                Debug.Log("play 1st anim from this player");
+            }
         }
     }
 
@@ -30,6 +29,6 @@ public class EventTrigger : MonoBehaviour
 
     private void OnDestroy()
     {
-        GameEvents.current.OnAnimTriggerEnter -= AnimTrigger;
+        GameEvents.current.OnAnimEnter -= Anim;
     }
 }

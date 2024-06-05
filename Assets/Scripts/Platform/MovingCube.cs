@@ -52,10 +52,10 @@ public class MovingCube : MonoBehaviour
     {
         p2 = mp2.position;
         currentTarget = p2;
-        GameEvents.current.OnStateEnter += TriggerEnter;
+        GameEvents.current.OnStateEnter += Enter;
         GameEvents.current.OnDestroyEnter += StopListening;
     }
-
+    
     void MoveLift()
     {
         switch (currentState)
@@ -66,7 +66,7 @@ public class MovingCube : MonoBehaviour
                 if (hasEnteredFreeFall)
                 {
                     hasEnteredFreeFall = false;
-                    GameEvents.current.StopFreefall();
+                    GameEvents.current.OnStopFreefallEnter();
                 }
                 
                 break;
@@ -98,8 +98,8 @@ public class MovingCube : MonoBehaviour
         transform.position = newPosition;
     }
 
-
-    private void TriggerEnter()
+//todo: naming convention, what does this do? 
+    private void Enter()
     {
         Debug.Log("Enter trigger area");
         GameManager.Instance._xrKnob.value = 0.09f;
@@ -107,7 +107,7 @@ public class MovingCube : MonoBehaviour
 
     private void StopListening()
     {
-        GameEvents.current.OnStateEnter -= TriggerEnter;
+        GameEvents.current.OnStateEnter -= Enter;
         GameEvents.current.OnDestroyEnter -= StopListening;
     }
     
@@ -118,6 +118,6 @@ public class MovingCube : MonoBehaviour
 
     private void OnDestroy()
     {
-        GameEvents.current.OnStateEnter -= TriggerEnter;
+        GameEvents.current.OnStateEnter -= Enter;
     }
 }
