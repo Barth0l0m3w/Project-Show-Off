@@ -4860,11 +4860,11 @@ PrefabInstance:
       objectReference: {fileID: 2010378614}
     - target: {fileID: 3520343921438452887, guid: 9066f48934ba0b345884dd46ea53d2fa, type: 3}
       propertyPath: cruisingTopSpeed
-      value: 5.3
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 3520343921438452887, guid: 9066f48934ba0b345884dd46ea53d2fa, type: 3}
       propertyPath: stoppingDeceleration
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5075318762848885196, guid: 9066f48934ba0b345884dd46ea53d2fa, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

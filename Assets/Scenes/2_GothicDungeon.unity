@@ -33637,6 +33637,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 1234599991785518051, guid: 00c66a8770228af48a4a71001f6c1f3a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4038817374262971502, guid: 00c66a8770228af48a4a71001f6c1f3a, type: 3}
       propertyPath: face
       value: 
@@ -44500,7 +44504,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 645677732423335733, guid: 9066f48934ba0b345884dd46ea53d2fa, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.0028505959
+      value: 0.0025820844
       objectReference: {fileID: 0}
     - target: {fileID: 915018313736933662, guid: 9066f48934ba0b345884dd46ea53d2fa, type: 3}
       propertyPath: m_AnchorMax.y
@@ -44608,11 +44612,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5669773664979328101, guid: 9066f48934ba0b345884dd46ea53d2fa, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.99998415
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5669773664979328101, guid: 9066f48934ba0b345884dd46ea53d2fa, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 0.000009715557
       objectReference: {fileID: 0}
     - target: {fileID: 5755455245101695464, guid: 9066f48934ba0b345884dd46ea53d2fa, type: 3}
       propertyPath: m_Name

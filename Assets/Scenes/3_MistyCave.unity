@@ -10104,6 +10104,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 1234599991785518051, guid: 00c66a8770228af48a4a71001f6c1f3a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2505533786866856388, guid: 00c66a8770228af48a4a71001f6c1f3a, type: 3}
       propertyPath: leftController
       value: 
