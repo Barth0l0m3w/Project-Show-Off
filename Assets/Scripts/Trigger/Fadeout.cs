@@ -14,23 +14,26 @@ public class Fadeout : MonoBehaviour
 
     public FadeType _FadeType;
     
-    [SerializeField] private CanvasGroup panel;
     [SerializeField] private float fadeIncrement = 0.02f;
     private bool startFadeout;
     private bool startFadein;
-    
+    private CanvasGroup panel;
+
+    private void Start()
+    {
+        panel = GameManager.Instance.fadeScreen;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Platform"))
         {
             if (_FadeType == FadeType.FADEIN)
             {
-                //startFadeout = false;
                 startFadein = true;
             }
             else if(_FadeType == FadeType.FADEOUT)
             {
-                //startFadein = false;
                 startFadeout = true;
             }
         }

@@ -14,6 +14,7 @@ public class GameEvents : MonoBehaviour
 
 
     public event Action OnStateEnter;
+    public event Action OnCheckpointTeleport;
 
     public void StateTriggerEnter()
     {
@@ -67,6 +68,12 @@ public class GameEvents : MonoBehaviour
 
     public event Action OnDestroyEnter;
 
+
+    public void CheckpointTeleported()
+    {
+        if (OnCheckpointTeleport != null) OnCheckpointTeleport();
+    }
+    
     private void OnDestroy()
     {
         if (OnDestroyEnter != null)

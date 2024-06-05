@@ -10,14 +10,22 @@ public class GameManager : MonoBehaviour
 {
     public MovingCube platform;
     public XRKnob _xrKnob;
-    //public GameObject face;
+    public CanvasGroup fadeScreen;
     public MovingCube.ElevatorState stateToMoveInto;
-    public SceneField sceneToLoad;
+
     
     public static GameManager Instance;
 
     private float value;
-    private AsyncOperation _asyncOperation;
+    private HapticSignal haptics;
+    private bool isVibrating;
+
+    
+
+    void Start()
+    {
+        haptics = GetComponent<HapticSignal>();
+    }
     
     void Awake()
     {
@@ -27,37 +35,12 @@ public class GameManager : MonoBehaviour
         }
         else if (Instance != this)
         {
-            Destroy(this);
+            Destroy(gameObject);
         }
-        SceneManager.sceneLoaded += OnSceneLoaded;
+        DontDestroyOnLoad(gameObject);
         
     }
-
-    private void OnEnable()
-    {
-        //SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        //Debug.Log("OnSceneLoaded called in scene: " + scene.name);
-        //Debug.Log("Knob value in scene: " + scene.name + " is: " + _xrKnob.value);
-        //Debug.Log("Moving into state: " + stateToMoveInto + " in scene: " + scene.name);
-        SetValue(_xrKnob.value);
-        //Debug.Log("After setting the value, the current state is: " + platform.currentState + " in scene: " + scene.name);
-    }
-
-    // private void OnDisable()
-    // {
-    //     SceneManager.sceneLoaded -= OnSceneLoaded;
-    // }
-
-    private void OnDestroy()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
     
-
     public void SetValue(float pValue)
     {
         value = pValue;
@@ -83,43 +66,49 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    //Source: https://gamedev.stackexchange.com/questions/185528/preload-scene-in-unity
-    private IEnumerator LoadSceneASyncProcess()
+    public void ResetElevator()
     {
-        this._asyncOperation = SceneManager.LoadSceneAsync(sceneToLoad.Name);
-
-        this._asyncOperation.allowSceneActivation = false;
-
-        while (!this._asyncOperation.isDone)
-        {
-            Debug.Log($"[scene]: {sceneToLoad.Name} [load progress]: {this._asyncOperation.progress}");
-
-            yield return null;
-        }
+        platform.transform.position = ElevatorDataContainer.Instance.startData.location;
+        platform.currentState = ElevatorDataContainer.Instance.startData.state;
     }
     
-    public void PreloadScene()
-    {
-        this.StartCoroutine(LoadSceneASyncProcess());
-    }
-    
-    public void LoadPreloadedScene()
-    {
-        this._asyncOperation.allowSceneActivation = true;
-    }
-
     public void ReloadCurrentScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        ResetElevator();
     }
 
     public void LoadSpecificScene()
     {
         SceneManager.LoadScene(0);
+        ResetElevator();
     }
 
     public void LoadSpecificScene(int sceneIndex)
     {
         SceneManager.LoadScene(sceneIndex);
+        ResetElevator();
+    }
+
+    public void TriggerHaptics()
+    {
+        haptics.TriggerHaptics();
+    }
+
+    public void TriggerHaptics(float intensity, float duration)
+    {
+        haptics.TriggerHaptics(intensity, duration);
+    }
+    
+    public IEnumerator TriggerHaptics(float inty, float dur, float spacing)
+    {
+        if (!isVibrating)
+        {
+            isVibrating = true;
+            haptics.TriggerHaptics(inty, dur);
+            yield return new WaitForSeconds(spacing);
+            isVibrating = false;
+        }
+        
     }
 }

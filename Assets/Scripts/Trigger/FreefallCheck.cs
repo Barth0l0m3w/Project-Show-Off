@@ -26,7 +26,7 @@ public class FreefallCheck : MonoBehaviour
     {
         if (replacesScene)
         {
-            GameManager.Instance.sceneToLoad = replacementScene;
+            //GameManager.Instance.sceneToLoad = replacementScene;
         }
         gameObject.SetActive(false);
     }
