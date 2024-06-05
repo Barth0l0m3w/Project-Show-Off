@@ -13,8 +13,18 @@ public class GameEvents : MonoBehaviour
         current = this;
     }
 
-    public event Action OnAnimTriggerEnter;
 
+    public event Action OnStateEnter;
+
+    public void StateTriggerEnter()
+    {
+        if (OnStateEnter != null)
+        {
+            OnStateEnter();
+        }
+    }
+
+    public event Action OnAnimTriggerEnter;
 
     public void AnimTriggerEnter()
     {
@@ -28,13 +38,13 @@ public class GameEvents : MonoBehaviour
         }
     }
 
-    public event Action OnSoundTrigger;
+    public event Action<int> OnSoundTrigger;
 
-    public void OnSoundTriggerEnter()
+    public void OnSoundTriggerEnter(int id)
     {
         if (OnSoundTrigger != null)
         {
-            OnSoundTrigger();
+            OnSoundTrigger(id);
         }
         else
         {
@@ -50,6 +60,7 @@ public class GameEvents : MonoBehaviour
     }
 
     public event Action OnDestroyEnter;
+
     private void OnDestroy()
     {
         if (OnDestroyEnter != null)
