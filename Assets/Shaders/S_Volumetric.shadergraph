@@ -196,6 +196,20 @@
         {
             "m_OutputSlot": {
                 "m_Node": {
+                    "m_Id": "7094ddc5ced8478da26e02a5c4aff559"
+                },
+                "m_SlotId": 2
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "9af65b25754046fd8ce304e6ce8f4903"
+                },
+                "m_SlotId": 0
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
                     "m_Id": "7a4b72d6bb6d46edb86a4fff28ceefbb"
                 },
                 "m_SlotId": 3
@@ -303,20 +317,6 @@
                     "m_Id": "7094ddc5ced8478da26e02a5c4aff559"
                 },
                 "m_SlotId": 1
-            }
-        },
-        {
-            "m_OutputSlot": {
-                "m_Node": {
-                    "m_Id": "c59bc4ef0da8483fb4cef0494ce20e28"
-                },
-                "m_SlotId": 2
-            },
-            "m_InputSlot": {
-                "m_Node": {
-                    "m_Id": "9af65b25754046fd8ce304e6ce8f4903"
-                },
-                "m_SlotId": 0
             }
         },
         {
@@ -2140,8 +2140,8 @@
     "m_CustomSlotLabel": "",
     "m_DismissedVersion": 0,
     "m_Precision": 0,
-    "overrideHLSLDeclaration": false,
-    "hlslDeclarationOverride": 0,
+    "overrideHLSLDeclaration": true,
+    "hlslDeclarationOverride": 1,
     "m_Hidden": false,
     "m_Value": 1.0,
     "m_FloatType": 0,
@@ -2168,8 +2168,8 @@
     "m_CustomSlotLabel": "",
     "m_DismissedVersion": 0,
     "m_Precision": 0,
-    "overrideHLSLDeclaration": false,
-    "hlslDeclarationOverride": 0,
+    "overrideHLSLDeclaration": true,
+    "hlslDeclarationOverride": 1,
     "m_Hidden": false,
     "m_Value": {
         "r": 0.8269845843315125,
@@ -3644,8 +3644,8 @@
     "m_CustomSlotLabel": "",
     "m_DismissedVersion": 0,
     "m_Precision": 0,
-    "overrideHLSLDeclaration": false,
-    "hlslDeclarationOverride": 0,
+    "overrideHLSLDeclaration": true,
+    "hlslDeclarationOverride": 1,
     "m_Hidden": false,
     "m_Value": 0.019999999552965165,
     "m_FloatType": 0,

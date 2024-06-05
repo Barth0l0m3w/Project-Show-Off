@@ -1,5 +1,25 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7332736384030329600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: Fmod/Build/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/SFX
+  lastModified: 638531995789745091
+  FileSizes:
+  - Name: Desktop
+    Value: 108128
+  Exists: 1
 --- !u!114 &-6329847894052958652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19,7 +39,7 @@ MonoBehaviour:
     Data3: -419002723
     Data4: 793040649
   Banks:
-  - {fileID: 2414448825989012597}
+  - {fileID: -7332736384030329600}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -46,7 +66,7 @@ MonoBehaviour:
     Data3: 1488690304
     Data4: -29806808
   Banks:
-  - {fileID: 2414448825989012597}
+  - {fileID: -7332736384030329600}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -67,60 +87,20 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 9195653460062862997}
-  - {fileID: 1179658740611639545}
   - {fileID: 2414448825989012597}
+  - {fileID: 685447123545335107}
+  - {fileID: -7332736384030329600}
   EditorEvents:
   - {fileID: -6329847894052958652}
   - {fileID: -2675107752932964230}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 1179658740611639545}
+  - {fileID: 2414448825989012597}
   StringsBanks:
-  - {fileID: 9195653460062862997}
-  cacheTime: 638531909168107286
+  - {fileID: 685447123545335107}
+  cacheTime: 638531995789745091
   cacheVersion: 131618
---- !u!114 &1179658740611639545
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: Fmod/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 638531904638494382
-  FileSizes:
-  - Name: Desktop
-    Value: 1036
-  Exists: 1
---- !u!114 &2414448825989012597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/SFX.bank
-  m_EditorClassIdentifier: 
-  Path: Fmod/Build/Desktop/SFX.bank
-  Name: SFX
-  StudioPath: bank:/SFX
-  lastModified: 638531909168107286
-  FileSizes:
-  - Name: Desktop
-    Value: 108128
-  Exists: 1
---- !u!114 &9195653460062862997
+--- !u!114 &685447123545335107
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -135,8 +115,28 @@ MonoBehaviour:
   Path: Fmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638531909168098084
+  lastModified: 638531995789735028
   FileSizes:
   - Name: Desktop
     Value: 848
+  Exists: 1
+--- !u!114 &2414448825989012597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: Fmod/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638526775630707950
+  FileSizes:
+  - Name: Desktop
+    Value: 1036
   Exists: 1
