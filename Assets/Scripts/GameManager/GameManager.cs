@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
     private HapticSignal haptics;
     private bool isVibrating;
 
+    
+
     void Start()
     {
         haptics = GetComponent<HapticSignal>();
@@ -64,19 +66,28 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void ResetElevator()
+    {
+        platform.transform.position = ElevatorDataContainer.Instance.startData.location;
+        platform.currentState = ElevatorDataContainer.Instance.startData.state;
+    }
+    
     public void ReloadCurrentScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        ResetElevator();
     }
 
     public void LoadSpecificScene()
     {
         SceneManager.LoadScene(0);
+        ResetElevator();
     }
 
     public void LoadSpecificScene(int sceneIndex)
     {
         SceneManager.LoadScene(sceneIndex);
+        ResetElevator();
     }
 
     public void TriggerHaptics()

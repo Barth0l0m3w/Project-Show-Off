@@ -69,6 +69,7 @@ public class MovingCube : MonoBehaviour
         currentTarget = p2;
         GameEvents.current.OnAnimTriggerEnter += TriggerEnter;
         GameEvents.current.OnDestroyEnter += StopListening;
+        GameEvents.current.OnCheckpointTeleport += hasTeleported;
     }
 
     void MoveLift()
@@ -118,6 +119,14 @@ public class MovingCube : MonoBehaviour
         transform.position = newPosition;
     }
 
+    void hasTeleported()
+    {
+        Debug.Log("Has teleported");
+        currentState = ElevatorState.CRUISE;
+        GameManager.Instance._xrKnob.gameObject.SetActive(true);
+        currentSpeed = cruisingTopSpeed;
+    }
+    
     /*private void Update()
     {
         if (!_stop)

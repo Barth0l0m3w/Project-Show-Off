@@ -17,6 +17,7 @@ public class GameEvents : MonoBehaviour
     public event Action OnAnimTriggerEnter;
     public event Action OnDestroyEnter;
     public event Action OnFreefallStop;
+    public event Action OnCheckpointTeleport;
 
     public void AnimTriggerEnter()
     {
@@ -48,6 +49,11 @@ public class GameEvents : MonoBehaviour
     {
         if(OnFreefallStop != null) OnFreefallStop();
         
+    }
+
+    public void CheckpointTeleported()
+    {
+        if (OnCheckpointTeleport != null) OnCheckpointTeleport();
     }
     
     private void OnDestroy()

@@ -26,6 +26,11 @@ public class LevelLoader : MonoBehaviour
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
+    private void Update()
+    {
+        Debug.Log(_asyncOperation);
+    }
+
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         //Debug.Log("OnSceneLoaded called in scene: " + scene.name);
