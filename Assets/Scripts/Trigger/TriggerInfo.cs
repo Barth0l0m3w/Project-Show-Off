@@ -6,7 +6,7 @@ using UnityEngine.Serialization;
 public class TriggerInfo : MonoBehaviour
 {
     private bool _hasTriggered;
-    
+    [SerializeField] private int soundId;
 
     public enum TypeEvent
     {
@@ -36,17 +36,19 @@ public class TriggerInfo : MonoBehaviour
         if (typeEvent == TypeEvent.Stop)
         {
             GameEvents.current.AnimTriggerEnter();
+            GameEvents.current.OnSoundTriggerEnter(soundId);
         }
 
         if (typeEvent == TypeEvent.FreeFall)
         {
             GameManager.Instance.stateToMoveInto = MovingCube.ElevatorState.FREEFALL;
             GameManager.Instance.SetValue(1);
+            GameEvents.current.OnSoundTriggerEnter(soundId);
         }
 
         if (typeEvent == TypeEvent.SoundEffect)
         {
-            GameEvents.current.OnSoundTriggerEnter();
+            GameEvents.current.OnSoundTriggerEnter(soundId);
         }
         
         Destroy(this.GameObject());
@@ -62,5 +64,6 @@ public class TriggerInfo : MonoBehaviour
     private void Stop()
     {
         GameEvents.current.AnimTriggerEnter();
+        GameEvents.current.OnSoundTriggerEnter(soundId);
     }
 }

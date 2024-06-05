@@ -52,7 +52,7 @@ public class MovingCube : MonoBehaviour
     {
         p2 = mp2.position;
         currentTarget = p2;
-        GameEvents.current.OnAnimTriggerEnter += TriggerEnter;
+        GameEvents.current.OnStateEnter += TriggerEnter;
         GameEvents.current.OnDestroyEnter += StopListening;
     }
 
@@ -107,7 +107,7 @@ public class MovingCube : MonoBehaviour
 
     private void StopListening()
     {
-        GameEvents.current.OnAnimTriggerEnter -= TriggerEnter;
+        GameEvents.current.OnStateEnter -= TriggerEnter;
         GameEvents.current.OnDestroyEnter -= StopListening;
     }
     
@@ -118,6 +118,6 @@ public class MovingCube : MonoBehaviour
 
     private void OnDestroy()
     {
-        GameEvents.current.OnAnimTriggerEnter -= TriggerEnter;
+        GameEvents.current.OnStateEnter -= TriggerEnter;
     }
 }
