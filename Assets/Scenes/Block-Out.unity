@@ -16903,13 +16903,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platform: {fileID: 0}
   _xrKnob: {fileID: 0}
-  face: {fileID: 0}
+  fadeScreen: {fileID: 0}
   stateToMoveInto: 0
-  sceneToLoad:
-    _sceneOB: {fileID: 0}
-    _name: 
-    _path: 
-    _buildIndex: 0
 --- !u!4 &876114983
 Transform:
   m_ObjectHideFlags: 0
@@ -22103,6 +22098,75 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1789527914}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1171924343
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 94265510747a08d418cde7df328fdbe7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.1740446
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 94265510747a08d418cde7df328fdbe7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1740446
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 94265510747a08d418cde7df328fdbe7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.1740446
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 94265510747a08d418cde7df328fdbe7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 94265510747a08d418cde7df328fdbe7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -145.79
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 94265510747a08d418cde7df328fdbe7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 8.2869
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 94265510747a08d418cde7df328fdbe7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 94265510747a08d418cde7df328fdbe7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 94265510747a08d418cde7df328fdbe7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 94265510747a08d418cde7df328fdbe7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 94265510747a08d418cde7df328fdbe7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 94265510747a08d418cde7df328fdbe7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 94265510747a08d418cde7df328fdbe7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 94265510747a08d418cde7df328fdbe7, type: 3}
+      propertyPath: m_Name
+      value: Luminescent Cave V3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 94265510747a08d418cde7df328fdbe7, type: 3}
 --- !u!1 &1175355574
 GameObject:
   m_ObjectHideFlags: 0
@@ -33032,6 +33096,7 @@ Transform:
   - {fileID: 4560540902840434518}
   - {fileID: 1975201806}
   - {fileID: 1628472243}
+  - {fileID: 105289158}
   m_Father: {fileID: 372170125}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1819233921
@@ -46210,7 +46275,13 @@ SceneRoots:
   - {fileID: 372170125}
   - {fileID: 876114983}
   - {fileID: 1183974453}
-  - {fileID: 578021073}
   - {fileID: 1862926338}
   - {fileID: 833638519}
   - {fileID: 543450653652009875}
+  - {fileID: 89957496}
+  - {fileID: 140066010}
+  - {fileID: 1223320911}
+  - {fileID: 1308160533}
+  - {fileID: 1351136657}
+  - {fileID: 1979604863}
+  - {fileID: 1171924343}
