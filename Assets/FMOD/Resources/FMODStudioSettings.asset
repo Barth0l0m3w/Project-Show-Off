@@ -330,9 +330,8 @@ MonoBehaviour:
   RealChannelSettings: []
   Plugins: []
   MasterBanks:
-  - SFX
+  - Master
   Banks:
-  - Master.strings
   - SFX
   BanksToLoad: []
   LiveUpdatePort: 9264
