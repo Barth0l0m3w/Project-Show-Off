@@ -6,13 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/1_OldChurch.unity
+    path: Assets/Scenes/1_OldChurch/1_OldChurch.unity
     guid: 77aa3a1ee89318345bb3ce82a268ee19
   - enabled: 1
-    path: Assets/Scenes/2_GothicDungeon.unity
+    path: Assets/Scenes/2_GothicDungeon/2_GothicDungeon.unity
     guid: f895f37afa0654a458435fd8bdb11f46
   - enabled: 1
-    path: Assets/Scenes/3_MistyCave.unity
+    path: Assets/Scenes/3_MistyCave/3_MistyCave.unity
     guid: 1aaa41db503dde24cbe851d1b2e5b2b9
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260, type: 2}
