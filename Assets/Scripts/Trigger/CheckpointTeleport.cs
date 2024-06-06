@@ -20,6 +20,8 @@ public class CheckpointTeleport : MonoBehaviour
             loader.gameObject.SetActive(true);
             //GameEvents.current.CheckpointTeleported();
             GameManager.Instance.platform.transform.position = tpPoint.position;
+            GameManager.Instance.platform.currentState = MovingCube.ElevatorState.CRUISE;
+            GameManager.Instance._xrKnob.gameObject.SetActive(true);
         }
     }
 }
