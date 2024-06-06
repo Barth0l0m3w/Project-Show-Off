@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{d501d187-bc26-4ca2-aeb0-ab80a758d517}">
+		<property name="assetPath">
+			<value>PuchingElevator.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>24</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>5.3760000000000003</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3a2e2cdb-d4d7-4574-8768-58a0176a3830}</destination>
+		</relationship>
+	</object>
+</objects>

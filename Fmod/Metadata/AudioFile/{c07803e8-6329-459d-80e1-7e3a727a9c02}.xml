@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{c07803e8-6329-459d-80e1-7e3a727a9c02}">
+		<property name="assetPath">
+			<value>Lever.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>24</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>6.4800000000000004</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3a2e2cdb-d4d7-4574-8768-58a0176a3830}</destination>
+		</relationship>
+	</object>
+</objects>
