@@ -124,7 +124,7 @@ public class MovingCube : MonoBehaviour
         Debug.Log("Has teleported");
         hasEnteredFreeFall = false;
         currentState = ElevatorState.CRUISE;
-        GameManager.Instance._xrKnob.gameObject.SetActive(true);
+        GameManager.Instance._xrKnob.enabled = true;
         currentSpeed = cruisingTopSpeed;
     }
 //todo: naming convention, what does this do? 

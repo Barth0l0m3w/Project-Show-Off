@@ -67,28 +67,28 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void ResetElevator()
-    {
-        platform.transform.position = ElevatorDataContainer.Instance.startData.location;
-        platform.currentState = ElevatorDataContainer.Instance.startData.state;
-    }
+    // public void ResetElevator()
+    // {
+    //     platform.transform.position = ElevatorDataContainer.Instance.startData.location;
+    //     platform.currentState = ElevatorDataContainer.Instance.startData.state;
+    // }
     
     public void ReloadCurrentScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        ResetElevator();
+        //ResetElevator();
     }
 
     public void LoadSpecificScene()
     {
         SceneManager.LoadScene(0);
-        ResetElevator();
+        //ResetElevator();
     }
 
     public void LoadSpecificScene(int sceneIndex)
     {
         SceneManager.LoadScene(sceneIndex);
-        ResetElevator();
+        //ResetElevator();
     }
 
     public void TriggerHaptics()
@@ -110,6 +110,10 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(spacing);
             isVibrating = false;
         }
-        
+    }
+
+    public void ToggleLever()
+    {
+        _xrKnob.enabled = !_xrKnob.enabled;
     }
 }

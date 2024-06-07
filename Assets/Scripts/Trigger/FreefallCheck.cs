@@ -12,13 +12,13 @@ public class FreefallCheck : MonoBehaviour
     
     private void Start()
     {
-        //GameEvents.current.OnFreefallStopTrigger += SuccesfullStopTrigger;
+        GameEvents.current.OnFreefallStopTrigger += SuccesfullStopTrigger;
 
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        //if(other.CompareTag("Platform")) GameManager.Instance._xrKnob.enabled = false;
+        if(other.CompareTag("Platform")) GameManager.Instance._xrKnob.enabled = false;
         
     }
 
@@ -33,6 +33,6 @@ public class FreefallCheck : MonoBehaviour
 
     private void OnDisable()
     {
-        //GameEvents.current.OnFreefallStopTrigger -= SuccesfullStopTrigger;
+        GameEvents.current.OnFreefallStopTrigger -= SuccesfullStopTrigger;
     }
 }
