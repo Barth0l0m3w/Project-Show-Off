@@ -5,6 +5,7 @@ using Udar.SceneManager;
 using Unity.VRTemplate;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using NaughtyAttributes;
 
 public class GameManager : MonoBehaviour
 {

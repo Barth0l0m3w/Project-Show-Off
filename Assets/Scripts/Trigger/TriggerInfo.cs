@@ -31,7 +31,7 @@ public class TriggerInfo : MonoBehaviour
     [Button]
     private void OnEnter()
     {
-        _hasTriggered = true;
+        if(typeEvent != TypeEvent.FreeFall)_hasTriggered = true;
 
         if (typeEvent == TypeEvent.Stop)
         {
@@ -53,7 +53,7 @@ public class TriggerInfo : MonoBehaviour
             GameEvents.current.SoundTriggerEnter(triggerId);
         }
 
-        Destroy(this.GameObject());
+        if(typeEvent != TypeEvent.FreeFall) Destroy(this.GameObject());
     }
 
     //todo: is this being used? 

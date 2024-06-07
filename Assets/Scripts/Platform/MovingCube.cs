@@ -122,6 +122,7 @@ public class MovingCube : MonoBehaviour
     void hasTeleported()
     {
         Debug.Log("Has teleported");
+        hasEnteredFreeFall = false;
         currentState = ElevatorState.CRUISE;
         GameManager.Instance._xrKnob.gameObject.SetActive(true);
         currentSpeed = cruisingTopSpeed;
