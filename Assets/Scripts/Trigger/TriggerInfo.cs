@@ -13,6 +13,7 @@ public class TriggerInfo : MonoBehaviour
         Stop,
         FreeFall,
         SoundEffect,
+        StopSoundEffect,
         Animation
     }
 
@@ -38,6 +39,7 @@ public class TriggerInfo : MonoBehaviour
         {
             GameEvents.current.AnimTriggerEnter(triggerId);
             GameEvents.current.StateTriggerEnter();
+            //GameEvents.current.StopSoundTriggerEnter();
             GameEvents.current.SoundTriggerEnter(triggerId);
         }
 
@@ -46,15 +48,22 @@ public class TriggerInfo : MonoBehaviour
             GameManager.Instance.stateToMoveInto = MovingCube.ElevatorState.FREEFALL;
             GameManager.Instance.platform.hasEnteredFreeFall = true;
             GameManager.Instance.SetValue(1);
+            //GameEvents.current.StopSoundTriggerEnter();
             GameEvents.current.SoundTriggerEnter(triggerId);
         }
 
         if (typeEvent == TypeEvent.SoundEffect)
         {
+            //GameEvents.current.StopSoundTriggerEnter();
             GameEvents.current.SoundTriggerEnter(triggerId);
+        }
+        if (typeEvent == TypeEvent.StopSoundEffect)
+        {
+            //GameEvents.current.StopSoundTriggerEnter();
         }
         if (typeEvent == TypeEvent.Animation)
         {
+            //GameEvents.current.StopSoundTriggerEnter();
             GameEvents.current.SoundTriggerEnter(triggerId);
             GameEvents.current.AnimTriggerEnter(triggerId);
         }

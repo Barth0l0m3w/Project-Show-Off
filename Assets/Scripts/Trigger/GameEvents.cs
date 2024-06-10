@@ -51,6 +51,20 @@ public class GameEvents : MonoBehaviour
             Debug.LogWarning("no Subscribers on Sounds");
         }
     }
+    
+    /*public event Action OnStopSoundTrigger;
+
+    public void StopSoundTriggerEnter()
+    {
+        if (OnSoundTrigger != null)
+        {
+            OnStopSoundTrigger();
+        }
+        else
+        {
+            Debug.LogWarning("no Subscribers on StopSounds");
+        }
+    }*/
 
     public event Action OnFreefallStopTrigger;
 
@@ -74,7 +88,7 @@ public class GameEvents : MonoBehaviour
         if (OnCheckpointTeleport != null) OnCheckpointTeleport();
     }
     
-    private void OnDestroy()
+    /*private void OnDestroy()
     {
         if (OnDestroyEnter != null)
         {
@@ -84,5 +98,5 @@ public class GameEvents : MonoBehaviour
         {
             Debug.LogWarning("no Subscribers on Destroy");
         }
-    }
+    }*/
 }

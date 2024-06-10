@@ -10,44 +10,35 @@ using STOP_MODE = FMOD.Studio.STOP_MODE;
 public class SoundTrigger : MonoBehaviour
 {
     [field: SerializeField] public EventReference eventPath { get; private set; }
+
     [SerializeField] private Transform soundOrigin;
     [SerializeField] private int id;
-    private bool _isPlayingSound = false;
-    private EventInstance soundEvent;
+    [SerializeField] private bool stopPreviousSound;
 
-    private Queue<EventReference> soundQueue = new Queue<EventReference>();
-    private EventInstance currentSoundEvent;
+    private EventInstance soundEvent;
 
     private void Start()
     {
         GameEvents.current.OnSoundTrigger += PlaySound;
-        
     }
 
     private void PlaySound(int id)
     {
-        if (id == this.id)
-        {
-            
-            Debug.Log("playing sound");
-            soundEvent = RuntimeManager.CreateInstance(eventPath);
-            soundEvent.set3DAttributes(RuntimeUtils.To3DAttributes(soundOrigin.position));
-            soundEvent.start();
-            soundEvent.release();
-            
-            //AudioManager.current.PlayOneShot(FMODEvents.current.bats, soundOrigin.position);
-        }
-
-        else
+        if (eventPath.IsNull)
         {
             Debug.LogWarning("Event path is empty! Please assign a valid FMOD event path.");
         }
-    }
-    
-    // todo: call it from an event that is placed om the trigger, it calls when a new trigger is hit
-    private void StopSound()
-    {
-        soundEvent.stop(STOP_MODE.ALLOWFADEOUT);
+        else if (id == this.id)
+        {
+            Debug.Log("playing sound");
+
+            AudioManager.current.PlayOneShot(eventPath, soundOrigin.position, stopPreviousSound);
+        }
+
+        /*else
+        {
+            Debug.LogWarning("Event path is empty! Please assign a valid FMOD event path.");
+        }*/
     }
 
     private void OnDisable()

@@ -15,10 +15,10 @@ MonoBehaviour:
   Path: Fmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638533504178971313
+  lastModified: 638536167952274426
   FileSizes:
   - Name: Desktop
-    Value: 1104
+    Value: 1246
   Exists: 1
 --- !u!114 &-8694763927555272799
 MonoBehaviour:
@@ -34,10 +34,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/GoodJob
   Guid:
-    Data1: -252452105
-    Data2: 1260983364
-    Data3: 240567437
-    Data4: 1700219051
+    Data1: 1195667667
+    Data2: 1144989227
+    Data3: -735381093
+    Data4: -369468876
   Banks:
   - {fileID: -8194407441175990891}
   IsStream: 0
@@ -61,10 +61,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/PuchingElevator
   Guid:
-    Data1: -312372216
-    Data2: 1126871979
-    Data3: 42794114
-    Data4: 343231579
+    Data1: -1689893749
+    Data2: 1303655904
+    Data3: -1835386198
+    Data4: 754083548
   Banks:
   - {fileID: -8194407441175990891}
   IsStream: 0
@@ -89,10 +89,10 @@ MonoBehaviour:
   Path: Fmod/Build/Desktop/Huston.bank
   Name: Huston
   StudioPath: bank:/Huston
-  lastModified: 638533504178961089
+  lastModified: 638536164344092838
   FileSizes:
   - Name: Desktop
-    Value: 240768
+    Value: 431808
   Exists: 1
 --- !u!114 &-6329847894052958652
 MonoBehaviour:
@@ -121,6 +121,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-5943856649192203518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/PuchingLever
+  m_EditorClassIdentifier: 
+  Path: event:/PuchingLever
+  Guid:
+    Data1: -204911585
+    Data2: 1234626604
+    Data3: -1548437106
+    Data4: -2120820196
+  Banks:
+  - {fileID: -8194407441175990891}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-5365835094207721167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,6 +168,33 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1036
   Exists: 1
+--- !u!114 &-2888832146247779192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/closing-metal-door-44280
+  m_EditorClassIdentifier: 
+  Path: event:/closing-metal-door-44280
+  Guid:
+    Data1: 943725091
+    Data2: 1173733172
+    Data3: -2095759442
+    Data4: 1582875874
+  Banks:
+  - {fileID: 7789577970426368602}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-2675107752932964230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,12 +247,15 @@ MonoBehaviour:
   - {fileID: 8776720333598601752}
   - {fileID: 6438766758521274414}
   - {fileID: -8694763927555272799}
+  - {fileID: -5943856649192203518}
+  - {fileID: 8945638728899985664}
+  - {fileID: -2888832146247779192}
   EditorParameters: []
   MasterBanks:
   - {fileID: 7851832187015634596}
   StringsBanks:
   - {fileID: -8914259095355261919}
-  cacheTime: 638533504178971313
+  cacheTime: 638536167954561778
   cacheVersion: 131618
 --- !u!114 &2414448825989012597
 MonoBehaviour:
@@ -261,19 +318,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Introduction
   Guid:
-    Data1: -1255739643
-    Data2: 1094067344
-    Data3: 528860860
-    Data4: -1302596534
+    Data1: 256371362
+    Data2: 1089844004
+    Data3: -1532624717
+    Data4: 903131272
   Banks:
   - {fileID: -8194407441175990891}
-  IsStream: 0
+  IsStream: 1
   Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 8000
 --- !u!114 &6387295315954749695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,10 +372,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Lever
   Guid:
-    Data1: 405987463
-    Data2: 1129395049
-    Data3: -1620139080
-    Data4: 1478219608
+    Data1: 1021553279
+    Data2: 1095348504
+    Data3: -1729140555
+    Data4: -1667282068
   Banks:
   - {fileID: -8194407441175990891}
   IsStream: 0
@@ -343,10 +400,10 @@ MonoBehaviour:
   Path: Fmod/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638532709666167413
+  lastModified: 638536167954561778
   FileSizes:
   - Name: Desktop
-    Value: 108128
+    Value: 185728
   Exists: 1
 --- !u!114 &7851832187015634596
 MonoBehaviour:
@@ -363,7 +420,7 @@ MonoBehaviour:
   Path: Fmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638532896978805318
+  lastModified: 638536167952264413
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -382,13 +439,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/GoToTheElevator
   Guid:
-    Data1: -1964980649
-    Data2: 1156755356
-    Data3: -1643284308
-    Data4: -523613145
+    Data1: -1709774197
+    Data2: 1259345433
+    Data3: -1664060778
+    Data4: 55053308
   Banks:
   - {fileID: -8194407441175990891}
   IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 18000
+--- !u!114 &8945638728899985664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Elevator
+  m_EditorClassIdentifier: 
+  Path: event:/Elevator
+  Guid:
+    Data1: -1653266139
+    Data2: 1093687557
+    Data3: -1274191179
+    Data4: -2047261362
+  Banks:
+  - {fileID: -8194407441175990891}
+  IsStream: 1
   Is3D: 1
   IsOneShot: 1
   Parameters: []
