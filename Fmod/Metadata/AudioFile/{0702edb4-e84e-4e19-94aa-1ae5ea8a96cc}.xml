@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{7ec5d8c0-a147-44d2-8916-bb3ebb5fb8be}">
+	<object class="AudioFile" id="{0702edb4-e84e-4e19-94aa-1ae5ea8a96cc}">
 		<property name="assetPath">
-			<value>Introduction.mp3</value>
+			<value>closing-metal-door-44280.mp3</value>
 		</property>
 		<property name="frequencyInKHz">
-			<value>44.0999985</value>
+			<value>24</value>
 		</property>
 		<property name="channelCount">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<property name="length">
-			<value>5.1983673469387757</value>
+			<value>6.3360000000000003</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{3a2e2cdb-d4d7-4574-8768-58a0176a3830}</destination>
