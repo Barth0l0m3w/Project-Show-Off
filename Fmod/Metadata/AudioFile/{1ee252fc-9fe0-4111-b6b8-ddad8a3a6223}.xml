@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{1ee252fc-9fe0-4111-b6b8-ddad8a3a6223}">
+		<property name="assetPath">
+			<value>PuchingLever.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>5.6946938775510203</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3a2e2cdb-d4d7-4574-8768-58a0176a3830}</destination>
+		</relationship>
+	</object>
+</objects>

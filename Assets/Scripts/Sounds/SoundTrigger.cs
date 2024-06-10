@@ -1,13 +1,21 @@
+using System.Collections.Generic;
+using FMOD;
+using FMOD.Studio;
 using FMODUnity;
 using UnityEngine;
+using UnityEngine.Serialization;
+using Debug = UnityEngine.Debug;
+using STOP_MODE = FMOD.Studio.STOP_MODE;
 
 public class SoundTrigger : MonoBehaviour
 {
     [field: SerializeField] public EventReference eventPath { get; private set; }
 
-    //[EventRef][SerializeField] private string ;
-    [SerializeField] private Transform soundorigin;
+    [SerializeField] private Transform soundOrigin;
     [SerializeField] private int id;
+    [SerializeField] private bool stopPreviousSound;
+
+    private EventInstance soundEvent;
 
     private void Start()
     {
@@ -16,22 +24,21 @@ public class SoundTrigger : MonoBehaviour
 
     private void PlaySound(int id)
     {
-        if (!eventPath.IsNull)
-        {
-            if (id == this.id)
-            {
-                Debug.Log("playing sound");
-                var soundEvent = RuntimeManager.CreateInstance(eventPath);
-                soundEvent.set3DAttributes(RuntimeUtils.To3DAttributes(soundorigin.position));
-                soundEvent.start();
-                soundEvent.release();
-                //AudioManager.current.PlayOneShot(FMODEvents.current.bats, soundorigin.position);
-            }
-        }
-        else
+        if (eventPath.IsNull)
         {
             Debug.LogWarning("Event path is empty! Please assign a valid FMOD event path.");
         }
+        else if (id == this.id)
+        {
+            Debug.Log("playing sound");
+
+            AudioManager.current.PlayOneShot(eventPath, soundOrigin.position, stopPreviousSound);
+        }
+
+        /*else
+        {
+            Debug.LogWarning("Event path is empty! Please assign a valid FMOD event path.");
+        }*/
     }
 
     private void OnDisable()
