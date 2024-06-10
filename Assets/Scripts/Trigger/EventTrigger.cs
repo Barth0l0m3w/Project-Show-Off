@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class EventTrigger : MonoBehaviour
 {
-    public Animator anim;
+    [SerializeField] private Animator anim;
     [SerializeField] private int animId;
 
     private void Start()
@@ -20,7 +20,7 @@ public class EventTrigger : MonoBehaviour
                 Debug.Log("play 1st anim from this player");
             }
         }
-        GameManager.Instance.TriggerHaptics(0.7f, anim.GetCurrentAnimatorClipInfo(0).Length);
+        //GameManager.Instance.TriggerHaptics(0.7f, anim.GetCurrentAnimatorClipInfo(0).Length);
     }
 
     private void PlayAnimation(int animIndex)
