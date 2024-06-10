@@ -52,7 +52,7 @@ public class GameEvents : MonoBehaviour
         }
     }
     
-    /*public event Action OnStopSoundTrigger;
+    public event Action OnStopSoundTrigger;
 
     public void StopSoundTriggerEnter()
     {
@@ -64,7 +64,7 @@ public class GameEvents : MonoBehaviour
         {
             Debug.LogWarning("no Subscribers on StopSounds");
         }
-    }*/
+    }
 
     public event Action OnFreefallStopTrigger;
 
