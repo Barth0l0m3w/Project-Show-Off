@@ -38,7 +38,6 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
-        
     }
     
     public void SetValue(float pValue)
