@@ -24,23 +24,21 @@ namespace Trigger
     
         private void DisOrEnable()
         {
-            
-            if (typeEvent == TypeEvent.Disable)
+            if (section != null)
             {
-                section.SetActive(false);
-                if (elevator)
+                if (typeEvent == TypeEvent.Disable)
                 {
-                    Debug.Log("disabling the elevator");
-                    GetComponent<MovingCube>().enabled = false;
+                    section.SetActive(false);
                 }
-            }
-            if (typeEvent == TypeEvent.Enable)
-            {
-                section.SetActive(true);
-                if (elevator)
+
+                if (typeEvent == TypeEvent.Enable)
                 {
-                    Debug.Log("enabling the elevator");
-                    GetComponent<MovingCube>().enabled = true;
+                    section.SetActive(true);
+                    if (elevator)
+                    {
+                        Debug.Log("enabling the elevator");
+                        GameManager.Instance._xrKnob.enabled = true;
+                    }
                 }
             }
         }

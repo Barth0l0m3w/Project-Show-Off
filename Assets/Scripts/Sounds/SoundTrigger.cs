@@ -1,7 +1,9 @@
+using System.Collections;
 using System.Collections.Generic;
 using FMOD;
 using FMOD.Studio;
 using FMODUnity;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Debug = UnityEngine.Debug;
@@ -31,8 +33,8 @@ public class SoundTrigger : MonoBehaviour
         }
         else if (id == this.id)
         {
-            Debug.Log("playing sound");
-
+            //Debug.Log("playing sound" + eventPath + stopPreviousSound);
+            
             AudioManager.current.PlayOneShot(eventPath, soundOrigin.position, stopPreviousSound);
         }
 
@@ -46,6 +48,11 @@ public class SoundTrigger : MonoBehaviour
     private void StopSound()
     {
         soundEvent.stop(STOP_MODE.ALLOWFADEOUT);
+    }
+
+    IEnumerator Pause()
+    {
+        yield return new WaitForSecondsRealtime(1);
     }
 
     private void OnDisable()
