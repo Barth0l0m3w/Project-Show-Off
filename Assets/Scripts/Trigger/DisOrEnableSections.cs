@@ -29,11 +29,6 @@ namespace Trigger
                 if (typeEvent == TypeEvent.Disable)
                 {
                     section.SetActive(false);
-                    if (elevator)
-                    {
-                        Debug.Log("disabling the elevator");
-                        GetComponent<MovingCube>().enabled = false;
-                    }
                 }
 
                 if (typeEvent == TypeEvent.Enable)
@@ -42,7 +37,7 @@ namespace Trigger
                     if (elevator)
                     {
                         Debug.Log("enabling the elevator");
-                        GetComponent<MovingCube>().enabled = true;
+                        GameManager.Instance._xrKnob.enabled = true;
                     }
                 }
             }
