@@ -5,13 +5,9 @@ namespace Trigger
     public class DisOrEnableSections : MonoBehaviour
     {
         [SerializeField] private GameObject section;
+        [SerializeField] private bool elevator;
         private bool _hasTriggered;
-
-        /*private void OnEnable()
-    {
-        
-    }*/
-
+  
         public enum TypeEvent
         {
             Enable,
@@ -28,13 +24,24 @@ namespace Trigger
     
         private void DisOrEnable()
         {
+            
             if (typeEvent == TypeEvent.Disable)
             {
                 section.SetActive(false);
+                if (elevator)
+                {
+                    Debug.Log("disabling the elevator");
+                    GetComponent<MovingCube>().enabled = false;
+                }
             }
             if (typeEvent == TypeEvent.Enable)
             {
                 section.SetActive(true);
+                if (elevator)
+                {
+                    Debug.Log("enabling the elevator");
+                    GetComponent<MovingCube>().enabled = true;
+                }
             }
         }
     }
