@@ -29,6 +29,7 @@ public class AudioManager : MonoBehaviour
     {
         if (stopPreviousSound)
         {
+            Debug.Log("stopping sound" + _currentSound);
             if (_currentSound.isValid())
             {
                 _currentSound.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
