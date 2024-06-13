@@ -9,7 +9,11 @@ public class AudioManager : MonoBehaviour
     public static AudioManager current { get; private set; }
 
     private EventInstance _currentSound;
-    
+
+    private void Start()
+    {
+        GameEvents.current.OnStopSoundTrigger += StopSound;
+    }
 
     private void Awake()
     {
@@ -37,5 +41,19 @@ public class AudioManager : MonoBehaviour
         
         _currentSound.start();
         _currentSound.release();
+    }
+
+    public void StopSound()
+    {
+        if (_currentSound.isValid())
+        {
+            _currentSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            _currentSound.release();
+        }
+    }
+
+    private void OnDestroy()
+    {
+        GameEvents.current.OnStopSoundTrigger -= StopSound;
     }
 }
