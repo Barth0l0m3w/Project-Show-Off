@@ -13,6 +13,7 @@ public class TriggerInfo : MonoBehaviour
         Stop,
         FreeFall,
         SoundEffect,
+        Animation
     }
 
     public TypeEvent typeEvent;
@@ -51,6 +52,11 @@ public class TriggerInfo : MonoBehaviour
         if (typeEvent == TypeEvent.SoundEffect)
         {
             GameEvents.current.SoundTriggerEnter(triggerId);
+        }
+        if (typeEvent == TypeEvent.Animation)
+        {
+            GameEvents.current.SoundTriggerEnter(triggerId);
+            GameEvents.current.AnimTriggerEnter(triggerId);
         }
 
         Destroy(this.GameObject());
