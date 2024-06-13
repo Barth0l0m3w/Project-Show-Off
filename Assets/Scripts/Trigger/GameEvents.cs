@@ -12,7 +12,6 @@ public class GameEvents : MonoBehaviour
         current = this;
     }
 
-
     public event Action OnStateEnter;
     public event Action OnCheckpointTeleport;
 
