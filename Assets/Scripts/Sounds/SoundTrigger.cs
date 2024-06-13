@@ -20,6 +20,7 @@ public class SoundTrigger : MonoBehaviour
     private void Start()
     {
         GameEvents.current.OnSoundTrigger += PlaySound;
+        
     }
 
     private void PlaySound(int id)
@@ -39,6 +40,12 @@ public class SoundTrigger : MonoBehaviour
         {
             Debug.LogWarning("Event path is empty! Please assign a valid FMOD event path.");
         }*/
+    }
+    
+    // todo: call it from an event that is placed om the trigger, it calls when a new trigger is hit
+    private void StopSound()
+    {
+        soundEvent.stop(STOP_MODE.ALLOWFADEOUT);
     }
 
     private void OnDisable()
