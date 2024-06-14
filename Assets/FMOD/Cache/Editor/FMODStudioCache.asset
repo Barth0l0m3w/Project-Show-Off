@@ -568,7 +568,7 @@ MonoBehaviour:
   Path: Fmod/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638538007717785856
+  lastModified: 638538944941397476
   FileSizes:
   - Name: Desktop
     Value: 185728
@@ -588,7 +588,7 @@ MonoBehaviour:
   Path: Fmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638538007716013762
+  lastModified: 638526775630707950
   FileSizes:
   - Name: Desktop
     Value: 1036
