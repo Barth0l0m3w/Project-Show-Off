@@ -15434,7 +15434,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4937210911712854599, guid: b85a112824f99134f911320db843f2af, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4937210911712854599, guid: b85a112824f99134f911320db843f2af, type: 3}
       propertyPath: soundOrigin
