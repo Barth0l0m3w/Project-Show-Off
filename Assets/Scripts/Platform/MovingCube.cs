@@ -82,6 +82,9 @@ public class MovingCube : MonoBehaviour
                 if (currentSpeed > 0)
                 {
                     StartCoroutine(GameManager.Instance.TriggerHaptics(1f, 0.1f, 0.1f));
+                    //todo: put in the particle effect in here,
+                    //todo: play the stopping sound
+                    //todo: make a if(currentspeed <= 0) {stop sound}
                 }
                 if (hasEnteredFreeFall)
                 {
