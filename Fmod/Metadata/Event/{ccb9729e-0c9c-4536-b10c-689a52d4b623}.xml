@@ -99,7 +99,14 @@
 			<destination>{99e5a931-f7f0-41b8-baed-4fdb1c14400a}</destination>
 		</relationship>
 	</object>
-	<object class="MixerBusPanner" id="{2316d95e-0fd7-4d6f-9f76-bef9421fd597}" />
+	<object class="MixerBusPanner" id="{2316d95e-0fd7-4d6f-9f76-bef9421fd597}">
+		<property name="surroundPanDirection">
+			<value>110</value>
+		</property>
+		<property name="surroundPanExtent">
+			<value>0</value>
+		</property>
+	</object>
 	<object class="SingleSound" id="{759ab158-86a0-4d10-8c21-9a7fc70c7ad3}">
 		<relationship name="audioFile">
 			<destination>{a7173b3b-5a0e-4c1e-9e0f-e0c41f1bbdd0}</destination>

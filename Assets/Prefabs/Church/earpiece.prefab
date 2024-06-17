@@ -1,5 +1,66 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &754398654207465618
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8514074507075379281}
+  - component: {fileID: 5913312490958260665}
+  - component: {fileID: 6044122730686187228}
+  m_Layer: 0
+  m_Name: Anims
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8514074507075379281
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754398654207465618}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6389792893659920802}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5913312490958260665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754398654207465618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1de6772da6000740b769de6c255d95d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+  animId: 2
+--- !u!114 &6044122730686187228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754398654207465618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1de6772da6000740b769de6c255d95d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+  animId: 2
 --- !u!1 &1318025291639268538
 GameObject:
   m_ObjectHideFlags: 0
@@ -15,10 +76,7 @@ GameObject:
   - component: {fileID: 6374842660582823952}
   - component: {fileID: 193912733578809418}
   - component: {fileID: 8439566055865811255}
-  - component: {fileID: 8588999861009854193}
-  - component: {fileID: 8370914874072439601}
   - component: {fileID: 9207201549374987433}
-  - component: {fileID: 5934964790303225057}
   - component: {fileID: 8871072385433347019}
   m_Layer: 0
   m_Name: earpiece
@@ -39,7 +97,9 @@ Transform:
   m_LocalPosition: {x: -8.696352, y: 29.762129, z: -13.658848}
   m_LocalScale: {x: 0.16593301, y: 0.16593301, z: 0.16593301}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 3427805280297145055}
+  - {fileID: 8514074507075379281}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8677950237495801856
@@ -306,50 +366,6 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
---- !u!114 &8588999861009854193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1318025291639268538}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 670ecd8c824bf134b9923efb1601c131, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <eventPath>k__BackingField:
-    Guid:
-      Data1: 943725091
-      Data2: 1173733172
-      Data3: -2095759442
-      Data4: 1582875874
-    Path: event:/closing-metal-door-44280
-  soundOrigin: {fileID: 0}
-  id: 2
-  stopPreviousSound: 0
---- !u!114 &8370914874072439601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1318025291639268538}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 670ecd8c824bf134b9923efb1601c131, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <eventPath>k__BackingField:
-    Guid:
-      Data1: 256371362
-      Data2: 1089844004
-      Data3: -1532624717
-      Data4: 903131272
-    Path: event:/Introduction
-  soundOrigin: {fileID: 0}
-  id: 2
-  stopPreviousSound: 0
 --- !u!114 &9207201549374987433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -364,20 +380,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerId: 2
   typeEvent: 4
---- !u!114 &5934964790303225057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1318025291639268538}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1de6772da6000740b769de6c255d95d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 0}
-  animId: 2
 --- !u!114 &8871072385433347019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -393,3 +395,80 @@ MonoBehaviour:
   section: {fileID: 0}
   elevator: 0
   typeEvent: 0
+--- !u!1 &4276096469811126465
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3427805280297145055}
+  - component: {fileID: 4429428460571193393}
+  - component: {fileID: 4747236755899643748}
+  m_Layer: 0
+  m_Name: Sounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3427805280297145055
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4276096469811126465}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6389792893659920802}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4429428460571193393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4276096469811126465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 670ecd8c824bf134b9923efb1601c131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <eventPath>k__BackingField:
+    Guid:
+      Data1: 256371362
+      Data2: 1089844004
+      Data3: -1532624717
+      Data4: 903131272
+    Path: event:/Introduction
+  soundOrigin: {fileID: 0}
+  id: 2
+  stopPreviousSound: 0
+--- !u!114 &4747236755899643748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4276096469811126465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 670ecd8c824bf134b9923efb1601c131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <eventPath>k__BackingField:
+    Guid:
+      Data1: 943725091
+      Data2: 1173733172
+      Data3: -2095759442
+      Data4: 1582875874
+    Path: event:/closing-metal-door-44280
+  soundOrigin: {fileID: 0}
+  id: 2
+  stopPreviousSound: 0
