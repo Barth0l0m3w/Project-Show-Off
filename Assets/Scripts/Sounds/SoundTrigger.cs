@@ -16,6 +16,7 @@ public class SoundTrigger : MonoBehaviour
     [SerializeField] private Transform soundOrigin;
     [SerializeField] private int id;
     [SerializeField] private bool stopPreviousSound;
+    //[SerializeField] private bool attenuation;
 
     private EventInstance soundEvent;
 
@@ -35,24 +36,13 @@ public class SoundTrigger : MonoBehaviour
         {
             //Debug.Log("playing sound" + eventPath + stopPreviousSound);
             
-            AudioManager.current.PlayOneShot(eventPath, soundOrigin.position, stopPreviousSound);
+            AudioManager.current.PlayOneShot(eventPath, soundOrigin.position, stopPreviousSound/*, attenuation*/);
         }
 
         /*else
         {
             Debug.LogWarning("Event path is empty! Please assign a valid FMOD event path.");
         }*/
-    }
-    
-    // todo: call it from an event that is placed om the trigger, it calls when a new trigger is hit
-    private void StopSound()
-    {
-        soundEvent.stop(STOP_MODE.ALLOWFADEOUT);
-    }
-
-    IEnumerator Pause()
-    {
-        yield return new WaitForSecondsRealtime(1);
     }
 
     private void OnDisable()

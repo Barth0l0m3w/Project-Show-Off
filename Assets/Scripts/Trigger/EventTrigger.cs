@@ -20,6 +20,7 @@ public class EventTrigger : MonoBehaviour
                 Debug.Log("play 1st anim from this player");
             }
         }
+        //todo: should we uncomment this?
         //GameManager.Instance.TriggerHaptics(0.7f, anim.GetCurrentAnimatorClipInfo(0).Length);
     }
 

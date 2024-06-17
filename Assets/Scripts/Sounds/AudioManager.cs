@@ -25,7 +25,7 @@ public class AudioManager : MonoBehaviour
         current = this;
     }
 
-    public void PlayOneShot(EventReference sound, Vector3 worldPos, bool stopPreviousSound)
+    public void PlayOneShot(EventReference sound, Vector3 worldPos, bool stopPreviousSound /*, bool attenuation*/)
     {
         if (stopPreviousSound)
         {
@@ -38,6 +38,11 @@ public class AudioManager : MonoBehaviour
         }
 
         _currentSound = RuntimeManager.CreateInstance(sound);
+        
+        /*if (attenuation)
+        {
+            
+        }*/
         _currentSound.set3DAttributes(RuntimeUtils.To3DAttributes(worldPos));
         
         _currentSound.start();
