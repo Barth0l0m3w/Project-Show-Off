@@ -34,6 +34,7 @@ namespace Trigger
                 if (typeEvent == TypeEvent.Enable)
                 {
                     section.SetActive(true);
+                    
                     if (elevator)
                     {
                         Debug.Log("enabling the elevator");

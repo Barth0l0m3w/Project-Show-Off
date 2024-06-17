@@ -108,13 +108,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <eventPath>k__BackingField:
     Guid:
-      Data1: 943725091
-      Data2: 1173733172
-      Data3: -2095759442
-      Data4: 1582875874
-    Path: event:/closing-metal-door-44280
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 0
   soundOrigin: {fileID: 0}
-  id: 3
+  id: 0
   stopPreviousSound: 0
 --- !u!114 &7957652411752482083
 MonoBehaviour:
@@ -130,13 +130,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <eventPath>k__BackingField:
     Guid:
-      Data1: 1021553279
-      Data2: 1095348504
-      Data3: -1729140555
-      Data4: -1667282068
-    Path: event:/Lever
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 0
   soundOrigin: {fileID: 0}
-  id: 3
+  id: 0
   stopPreviousSound: 0
 --- !u!1 &9221255125768352103
 GameObject:
