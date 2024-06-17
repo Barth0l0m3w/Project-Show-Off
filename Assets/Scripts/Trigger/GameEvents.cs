@@ -50,7 +50,7 @@ public class GameEvents : MonoBehaviour
             Debug.LogWarning("no Subscribers on Sounds");
         }
     }
-    
+
     public event Action OnStopSoundTrigger;
 
     public void StopSoundTriggerEnter()
@@ -79,14 +79,13 @@ public class GameEvents : MonoBehaviour
         }
     }
 
-    public event Action OnDestroyEnter;
-
 
     public void CheckpointTeleported()
     {
         if (OnCheckpointTeleport != null) OnCheckpointTeleport();
     }
-    
+
+    public event Action OnDestroyEnter;
     /*private void OnDestroy()
     {
         if (OnDestroyEnter != null)
