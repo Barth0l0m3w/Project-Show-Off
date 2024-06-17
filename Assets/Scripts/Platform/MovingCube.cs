@@ -36,8 +36,8 @@ public class MovingCube : MonoBehaviour
 
     #endregion
 
-    #region ToBeRemoved_MoveParams
-
+    #region MoveParams
+    
     [Header("Location to move to")] [SerializeField]
     private Transform mp2;
 
@@ -59,8 +59,7 @@ public class MovingCube : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-
-        DontDestroyOnLoad(gameObject);
+        
     }
 
     // These should be removed when the level is more established
