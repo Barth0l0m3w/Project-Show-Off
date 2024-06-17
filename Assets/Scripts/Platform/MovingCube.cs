@@ -15,6 +15,7 @@ public class MovingCube : MonoBehaviour
     [SerializeField] private float cruisingAcceleration;
     [SerializeField] private float freefallTopSpeed;
     [SerializeField] private float freefallAcceleration;
+    [SerializeField] private ParticleSystem brakeSparks;
 
     #endregion
 
@@ -47,7 +48,7 @@ public class MovingCube : MonoBehaviour
 
     private float currentSpeed = 0;
     private static MovingCube Instance;
-    
+
     void Awake()
     {
         if (Instance == null)
@@ -58,8 +59,8 @@ public class MovingCube : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
         DontDestroyOnLoad(gameObject);
-        
     }
 
     // These should be removed when the level is more established
@@ -71,7 +72,7 @@ public class MovingCube : MonoBehaviour
         //GameEvents.current.OnDestroyEnter += StopListening; todo: this function can be gone right? 
         GameEvents.current.OnCheckpointTeleport += hasTeleported;
     }
-    
+
     void MoveLift()
     {
         switch (currentState)
@@ -83,15 +84,20 @@ public class MovingCube : MonoBehaviour
                 {
                     StartCoroutine(GameManager.Instance.TriggerHaptics(1f, 0.1f, 0.1f));
                     //todo: put in the particle effect in here,
+                    brakeSparks.Play();
                     //todo: play the stopping sound
-                    //todo: make a if(currentspeed <= 0) {stop sound}
                 }
+                else if (currentSpeed <= 0)
+                {
+                    brakeSparks.Stop();
+                }
+
                 if (hasEnteredFreeFall)
                 {
                     hasEnteredFreeFall = false;
                     GameEvents.current.OnStopFreefallEnter();
                 }
-                
+
                 break;
             case ElevatorState.CRUISE:
                 ApplySpeed(cruisingAcceleration, cruisingTopSpeed);
@@ -130,6 +136,7 @@ public class MovingCube : MonoBehaviour
         GameManager.Instance._xrKnob.enabled = true;
         currentSpeed = cruisingTopSpeed;
     }
+
 //todo: naming convention, what does this do? 
     private void Enter()
     {
@@ -142,7 +149,7 @@ public class MovingCube : MonoBehaviour
         GameEvents.current.OnStateEnter -= Enter;
         //GameEvents.current.OnDestroyEnter -= StopListening;
     }
-    
+
     void FixedUpdate()
     {
         MoveLift();
