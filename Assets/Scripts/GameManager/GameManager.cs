@@ -2,15 +2,17 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Udar.SceneManager;
-using Unity.VRTemplate;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using NaughtyAttributes;
+using UnityEngine.XR.Content.Interaction;
+using XRKnob = Unity.VRTemplate.XRKnob;
 
 public class GameManager : MonoBehaviour
 {
     public MovingCube platform;
     public XRKnob _xrKnob;
+    public XRLever _Lever;
     public CanvasGroup fadeScreen;
     public MovingCube.ElevatorState stateToMoveInto;
 
@@ -114,5 +116,6 @@ public class GameManager : MonoBehaviour
     public void ToggleLever()
     {
         _xrKnob.enabled = !_xrKnob.enabled;
+        _Lever.enabled = !_Lever.enabled;
     }
 }

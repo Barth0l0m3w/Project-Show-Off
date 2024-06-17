@@ -38,6 +38,7 @@ namespace Trigger
                     {
                         Debug.Log("enabling the elevator");
                         GameManager.Instance._xrKnob.enabled = true;
+                        GameManager.Instance._Lever.enabled = true;
                     }
                 }
             }

@@ -134,6 +134,7 @@ public class MovingCube : MonoBehaviour
         hasEnteredFreeFall = false;
         currentState = ElevatorState.CRUISE;
         GameManager.Instance._xrKnob.enabled = true;
+        GameManager.Instance._Lever.enabled = true;
         currentSpeed = cruisingTopSpeed;
     }
 
@@ -142,6 +143,7 @@ public class MovingCube : MonoBehaviour
     {
         Debug.Log("Enter trigger area");
         GameManager.Instance._xrKnob.value = 0.09f;
+        GameManager.Instance._Lever.value = false;
     }
 
     private void StopListening()
