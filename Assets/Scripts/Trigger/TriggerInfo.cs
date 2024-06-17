@@ -66,16 +66,6 @@ public class TriggerInfo : MonoBehaviour
 
         if(typeEvent != TypeEvent.FreeFall) Destroy(this.GameObject());
     }
-
-    //todo: is this being used? 
-    /*private void FreeFall()
-    {
-        GameManager.Instance.stateToMoveInto = MovingCube.ElevatorState.FREEFALL;
-        GameManager.Instance.platform.hasEnteredFreeFall = true;
-        GameManager.Instance.SetValue(1);
-    }*/
-
-    //why is this here? its not being called, todo: cleanup
     private void Stop()
     {
         GameEvents.current.AnimTriggerEnter(triggerId);

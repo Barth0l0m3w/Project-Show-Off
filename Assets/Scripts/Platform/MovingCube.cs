@@ -68,7 +68,7 @@ public class MovingCube : MonoBehaviour
         p2 = mp2.position;
         currentTarget = p2;
         GameEvents.current.OnStateEnter += Enter;
-        GameEvents.current.OnDestroyEnter += StopListening;
+        //GameEvents.current.OnDestroyEnter += StopListening; todo: this function can be gone right? 
         GameEvents.current.OnCheckpointTeleport += hasTeleported;
     }
     
@@ -137,7 +137,7 @@ public class MovingCube : MonoBehaviour
     private void StopListening()
     {
         GameEvents.current.OnStateEnter -= Enter;
-        GameEvents.current.OnDestroyEnter -= StopListening;
+        //GameEvents.current.OnDestroyEnter -= StopListening;
     }
     
     void FixedUpdate()
