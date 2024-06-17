@@ -8193,7 +8193,6 @@ MonoBehaviour:
   soundOrigin: {fileID: 1994796085}
   id: 3
   stopPreviousSound: 0
-  attenuation: 0
 --- !u!1 &930191083
 GameObject:
   m_ObjectHideFlags: 0
@@ -16374,7 +16373,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1461541728}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.9396926, z: 0, w: 0.34202015}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -18948,63 +18947,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9d2c74b5a2189164fa71b94a6f457e07, type: 3}
   m_PrefabInstance: {fileID: 1807588236}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1809054751
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3510202148545695296, guid: d191e670d304daf4297c28e5ef945e55, type: 3}
-      propertyPath: m_Name
-      value: Sparks_Light
-      objectReference: {fileID: 0}
-    - target: {fileID: 6709059757983255620, guid: d191e670d304daf4297c28e5ef945e55, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.48591244
-      objectReference: {fileID: 0}
-    - target: {fileID: 6709059757983255620, guid: d191e670d304daf4297c28e5ef945e55, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.065
-      objectReference: {fileID: 0}
-    - target: {fileID: 6709059757983255620, guid: d191e670d304daf4297c28e5ef945e55, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.171
-      objectReference: {fileID: 0}
-    - target: {fileID: 6709059757983255620, guid: d191e670d304daf4297c28e5ef945e55, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6709059757983255620, guid: d191e670d304daf4297c28e5ef945e55, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6709059757983255620, guid: d191e670d304daf4297c28e5ef945e55, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6709059757983255620, guid: d191e670d304daf4297c28e5ef945e55, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6709059757983255620, guid: d191e670d304daf4297c28e5ef945e55, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6709059757983255620, guid: d191e670d304daf4297c28e5ef945e55, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6709059757983255620, guid: d191e670d304daf4297c28e5ef945e55, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d191e670d304daf4297c28e5ef945e55, type: 3}
 --- !u!1001 &1818766474
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22212,7 +22154,6 @@ MonoBehaviour:
   soundOrigin: {fileID: 1994796085}
   id: 4
   stopPreviousSound: 0
-  attenuation: 0
 --- !u!1001 &2056750483
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22829,4 +22770,3 @@ SceneRoots:
   - {fileID: 583109122}
   - {fileID: 575994669}
   - {fileID: 844503730}
-  - {fileID: 1809054751}
