@@ -17,7 +17,7 @@ public class EventTrigger : MonoBehaviour
             if (id == animId)
             {
                 PlayAnimation(animId);
-                Debug.Log("play 1st anim from this player");
+                Debug.Log("play 1st anim from " + anim);
             }
         }
         //todo: should we uncomment this?
