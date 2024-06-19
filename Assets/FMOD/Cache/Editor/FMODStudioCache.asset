@@ -12,22 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/Rocks
   m_EditorClassIdentifier: 
-  Path: event:/Rocks
-  Guid:
-    Data1: 75546645
-    Data2: 1331593477
-    Data3: 1488690304
-    Data4: -29806808
-  Banks:
-  - {fileID: -4889845206140959682}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-8348852991951862612
+  Path: Fmod/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638539635985210267
+  FileSizes:
+  - Name: Desktop
+    Value: 1518
+  Exists: 1
+--- !u!114 &-8694763927555272799
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,6 +102,26 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 0
 --- !u!114 &-6996616795065230906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Huston.bank
+  m_EditorClassIdentifier: 
+  Path: Fmod/Build/Desktop/Huston.bank
+  Name: Huston
+  StudioPath: bank:/Huston
+  lastModified: 638539635985200286
+  FileSizes:
+  - Name: Desktop
+    Value: 683776
+  Exists: 1
+--- !u!114 &-6329847894052958652
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -402,8 +415,8 @@ MonoBehaviour:
   MasterBanks:
   - {fileID: 7177870147808563713}
   StringsBanks:
-  - {fileID: -1041373408960277726}
-  cacheTime: 638542394372401850
+  - {fileID: -8914259095355261919}
+  cacheTime: 638539635985240281
   cacheVersion: 131618
 --- !u!114 &757362763979927554
 MonoBehaviour:
@@ -516,12 +529,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: Fmod/Build/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/SFX
+  lastModified: 638539635985240281
+  FileSizes:
+  - Name: Desktop
+    Value: 185728
+  Exists: 1
+--- !u!114 &7851832187015634596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master.bank
   m_EditorClassIdentifier: 
   Path: Fmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638542282491891516
+  lastModified: 638531823573558812
   FileSizes:
   - Name: Desktop
     Value: 1036
