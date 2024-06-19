@@ -3412,6 +3412,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 231435794}
     m_Modifications:
     - target: {fileID: 313683700190376859, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 313683700190376859, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
       propertyPath: triggerId
       value: 12
       objectReference: {fileID: 0}
@@ -5834,6 +5838,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 802713676}
     m_Modifications:
     - target: {fileID: 313683700190376859, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 313683700190376859, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
       propertyPath: triggerId
       value: 4
       objectReference: {fileID: 0}
@@ -5936,6 +5944,10 @@ PrefabInstance:
     - target: {fileID: 3514781324066629979, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.442
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531965359777593532, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7957652411752482083, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
       propertyPath: soundOrigin
@@ -15992,6 +16004,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0.442
       objectReference: {fileID: 0}
+    - target: {fileID: 5531965359777593532, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7957652411752482083, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
       propertyPath: soundOrigin
       value: 
@@ -19219,7 +19235,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4000357608604557709}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -19295,6 +19311,10 @@ PrefabInstance:
     - target: {fileID: 313683700190376859, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
       propertyPath: soundId
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 313683700190376859, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 313683700190376859, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
       propertyPath: triggerId
@@ -19387,6 +19407,10 @@ PrefabInstance:
     - target: {fileID: 821386392136828235, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7957652411752482083, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7957652411752482083, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
       propertyPath: <eventPath>k__BackingField.Path
@@ -19557,6 +19581,10 @@ PrefabInstance:
     - target: {fileID: 1750366038777280931, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531965359777593532, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7957652411752482083, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
       propertyPath: id
