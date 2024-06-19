@@ -2,18 +2,20 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Udar.SceneManager;
-using Unity.VRTemplate;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using NaughtyAttributes;
+using UnityEngine.XR.Content.Interaction;
+using UnityEngine.XR.Interaction.Toolkit;
+using XRKnob = Unity.VRTemplate.XRKnob;
 
 public class GameManager : MonoBehaviour
 {
     public MovingCube platform;
     public XRKnob _xrKnob;
+    public XRLever _Lever;
     public CanvasGroup fadeScreen;
     public MovingCube.ElevatorState stateToMoveInto;
-
     
     public static GameManager Instance;
 
@@ -38,7 +40,7 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     }
     
     public void SetValue(float pValue)
@@ -114,5 +116,20 @@ public class GameManager : MonoBehaviour
     public void ToggleLever()
     {
         _xrKnob.enabled = !_xrKnob.enabled;
+        _Lever.enabled = !_Lever.enabled;
+    }
+
+    public void EventDebug()
+    {
+        Debug.Log("Rowan is so sexy uwu");
+    }
+
+    public void HandleLeverGrabGFX(BaseInteractionEventArgs eventArgs)
+    {
+        Debug.Log("Test log grabby");
+        if (eventArgs.interactorObject is XRBaseControllerInteractor controllerInteractor)
+        {
+            controllerInteractor.gameObject.GetComponentInParent<HandModelCont>().ToggleGFX();
+        }
     }
 }

@@ -6,10 +6,7 @@ using UnityEngine;
 
 public class FreefallCheck : MonoBehaviour
 {
-    [Header("Tick if transition at this level end")]
-    [SerializeField] private bool replacesScene;
-    [SerializeField] private SceneField replacementScene;
-    
+
     private void Start()
     {
         GameEvents.current.OnFreefallStopTrigger += SuccesfullStopTrigger;
@@ -18,16 +15,16 @@ public class FreefallCheck : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Platform")) GameManager.Instance._xrKnob.enabled = false;
+        if (other.CompareTag("Platform"))
+        {
+            GameManager.Instance._xrKnob.enabled = false;
+            GameManager.Instance._Lever.enabled = false;
+        }
         
     }
 
     void SuccesfullStopTrigger()
     {
-        if (replacesScene)
-        {
-            //GameManager.Instance.sceneToLoad = replacementScene;
-        }
         gameObject.SetActive(false);
     }
 
