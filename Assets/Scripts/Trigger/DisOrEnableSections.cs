@@ -34,14 +34,13 @@ namespace Trigger
                 if (typeEvent == TypeEvent.Enable)
                 {
                     section.SetActive(true);
-                    
-                    if (elevator)
-                    {
-                        Debug.Log("enabling the elevator");
-                        GameManager.Instance._xrKnob.enabled = true;
-                        GameManager.Instance._Lever.enabled = true;
-                    }
                 }
+            }
+            if (elevator)
+            {
+                Debug.Log("enabling the elevator");
+                GameManager.Instance._xrKnob.enabled = true;
+                GameManager.Instance._Lever.enabled = true;
             }
         }
     }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using FMOD;
@@ -16,14 +17,21 @@ public class SoundTrigger : MonoBehaviour
     [SerializeField] private Transform soundOrigin;
     [SerializeField] private int id;
     [SerializeField] private bool stopPreviousSound;
-    //[SerializeField] private bool attenuation;
+
+    private Vector3 soundpos;
 
     private EventInstance soundEvent;
 
     private void Start()
     {
         GameEvents.current.OnSoundTrigger += PlaySound;
-        
+    }
+
+//todo: setter for the soundpos soundmanager can use a getter and in the update annotate the sounds in update with. 
+
+    private void Update()
+    {
+        soundpos = soundOrigin.position;
     }
 
     private void PlaySound(int id)
@@ -35,8 +43,8 @@ public class SoundTrigger : MonoBehaviour
         else if (id == this.id)
         {
             //Debug.Log("playing sound" + eventPath + stopPreviousSound);
-            
-            AudioManager.current.PlayOneShot(eventPath, soundOrigin.position, stopPreviousSound/*, attenuation*/);
+
+            AudioManager.current.PlayOneShot(eventPath, soundOrigin.position, stopPreviousSound);
         }
 
         /*else

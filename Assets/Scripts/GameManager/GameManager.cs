@@ -126,7 +126,7 @@ public class GameManager : MonoBehaviour
 
     public void HandleLeverGrabGFX(BaseInteractionEventArgs eventArgs)
     {
-        Debug.Log("Test log grabby");
+        //Debug.Log("Test log grabby");
         if (eventArgs.interactorObject is XRBaseControllerInteractor controllerInteractor)
         {
             controllerInteractor.gameObject.GetComponentInParent<HandModelCont>().ToggleGFX();
