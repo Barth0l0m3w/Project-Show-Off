@@ -40,7 +40,7 @@ public class ParticleAvoidance : MonoBehaviour
 
             if (distanceToClosestHand <= avoidArea)
             {
-                Debug.Log("In avoid area");
+                //Debug.Log("In avoid area");
                 float forceMultiplier = Mathf.Lerp(maxRepelCoeff,  minRepelCoeff, distanceToClosestHand / avoidArea);
                 Vector3 avoidanceForce = direction * forceMultiplier * (avoidArea - distanceToClosestHand);
                 particles[i].velocity = Vector3.Lerp(currentVelocity, currentVelocity + avoidanceForce, Time.deltaTime * updateVelocityRate);
