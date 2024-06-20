@@ -683,6 +683,18 @@ PrefabInstance:
       propertyPath: rightHand
       value: 
       objectReference: {fileID: 3241343062354895787}
+    - target: {fileID: 7959748975270948368, guid: 47e020363fff0054fbae4d702dffb327, type: 3}
+      propertyPath: maxRepelCoeff
+      value: 2.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7959748975270948368, guid: 47e020363fff0054fbae4d702dffb327, type: 3}
+      propertyPath: minRepelCoeff
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7959748975270948368, guid: 47e020363fff0054fbae4d702dffb327, type: 3}
+      propertyPath: updateVelocityRate
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7384,6 +7396,18 @@ PrefabInstance:
       propertyPath: rightHand
       value: 
       objectReference: {fileID: 3241343062354895787}
+    - target: {fileID: 7959748975270948368, guid: 47e020363fff0054fbae4d702dffb327, type: 3}
+      propertyPath: maxRepelCoeff
+      value: 2.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7959748975270948368, guid: 47e020363fff0054fbae4d702dffb327, type: 3}
+      propertyPath: minRepelCoeff
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7959748975270948368, guid: 47e020363fff0054fbae4d702dffb327, type: 3}
+      propertyPath: updateVelocityRate
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11645,6 +11669,18 @@ PrefabInstance:
       propertyPath: rightHand
       value: 
       objectReference: {fileID: 3241343062354895787}
+    - target: {fileID: 7959748975270948368, guid: 47e020363fff0054fbae4d702dffb327, type: 3}
+      propertyPath: maxRepelCoeff
+      value: 2.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7959748975270948368, guid: 47e020363fff0054fbae4d702dffb327, type: 3}
+      propertyPath: minRepelCoeff
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7959748975270948368, guid: 47e020363fff0054fbae4d702dffb327, type: 3}
+      propertyPath: updateVelocityRate
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19048,6 +19084,14 @@ PrefabInstance:
       propertyPath: rightHand
       value: 
       objectReference: {fileID: 3241343062354895787}
+    - target: {fileID: 7959748975270948368, guid: 47e020363fff0054fbae4d702dffb327, type: 3}
+      propertyPath: maxRepelCoeff
+      value: 2.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7959748975270948368, guid: 47e020363fff0054fbae4d702dffb327, type: 3}
+      propertyPath: minRepelCoeff
+      value: 0.9
+      objectReference: {fileID: 0}
     - target: {fileID: 7959748975270948368, guid: 47e020363fff0054fbae4d702dffb327, type: 3}
       propertyPath: updateVelocityRate
       value: 2
