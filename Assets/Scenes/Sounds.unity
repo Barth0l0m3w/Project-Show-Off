@@ -4601,36 +4601,13 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 4142097532818392631, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 9221255125768352103, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 390039429}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
 --- !u!4 &390039427 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 821386392136828235, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
   m_PrefabInstance: {fileID: 390039426}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &390039428 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9221255125768352103, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
-  m_PrefabInstance: {fileID: 390039426}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &390039429
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 390039428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f01fd2d4808d734c87361a4a14b428f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  section: {fileID: 583109121}
-  elevator: 0
-  typeEvent: 1
 --- !u!1001 &395749427
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4912,6 +4889,33 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &412017397 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7302926914586892037, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
+  m_PrefabInstance: {fileID: 1626184993399141700}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &412017401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412017397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 670ecd8c824bf134b9923efb1601c131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <eventPath>k__BackingField:
+    Guid:
+      Data1: -933806109
+      Data2: 1280088538
+      Data3: -339927391
+      Data4: 1123859079
+    Path: event:/SFX/SuddenBraking
+  soundOrigin: {fileID: 1994796085}
+  id: 6
+  stopPreviousSound: 0
 --- !u!1 &421184911 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7244663357803350900, guid: 3c11327b0df6ba8418eebd3029821954, type: 3}
@@ -6268,7 +6272,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &575994669
 Transform:
   m_ObjectHideFlags: 0
@@ -25191,7 +25195,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 313683700190376859, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
       propertyPath: typeEvent
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 313683700190376859, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
       propertyPath: animNumber
@@ -25412,7 +25416,7 @@ PrefabInstance:
       objectReference: {fileID: 1994796085}
     - target: {fileID: 434572698723985707, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
       propertyPath: <eventPath>k__BackingField.Path
-      value: event:/You'veStopped
+      value: event:/Houston/You'veStopped
       objectReference: {fileID: 0}
     - target: {fileID: 434572698723985707, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
       propertyPath: <eventPath>k__BackingField.Guid.Data1
@@ -25491,28 +25495,32 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7957652411752482083, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7957652411752482083, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
       propertyPath: soundOrigin
       value: 
       objectReference: {fileID: 1325082932}
     - target: {fileID: 7957652411752482083, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
       propertyPath: <eventPath>k__BackingField.Path
-      value: event:/Bats
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7957652411752482083, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
       propertyPath: <eventPath>k__BackingField.Guid.Data1
-      value: 947965712
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7957652411752482083, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
       propertyPath: <eventPath>k__BackingField.Guid.Data2
-      value: 1226862778
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7957652411752482083, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
       propertyPath: <eventPath>k__BackingField.Guid.Data3
-      value: -419002723
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7957652411752482083, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
       propertyPath: <eventPath>k__BackingField.Guid.Data4
-      value: 793040649
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9221255125768352103, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
       propertyPath: m_Name
@@ -25526,6 +25534,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 9221255125768352103, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1626184993399141703}
+    - targetCorrespondingSourceObject: {fileID: 7302926914586892037, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 412017401}
   m_SourcePrefab: {fileID: 100100000, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
 --- !u!4 &1626184993399141701 stripped
 Transform:
@@ -25630,11 +25641,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1839327011101520305, guid: 7fb1195af11b9f14dabd93b7291c16e4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.74
+      value: 0.17
       objectReference: {fileID: 0}
     - target: {fileID: 1839327011101520305, guid: 7fb1195af11b9f14dabd93b7291c16e4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.74
+      value: -0.51
       objectReference: {fileID: 0}
     - target: {fileID: 1839327011101520305, guid: 7fb1195af11b9f14dabd93b7291c16e4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -25734,7 +25745,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5095265128644324791, guid: 7fb1195af11b9f14dabd93b7291c16e4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.52
+      value: 0.077
       objectReference: {fileID: 0}
     - target: {fileID: 5095265128644324791, guid: 7fb1195af11b9f14dabd93b7291c16e4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -26113,6 +26124,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1258297012730559348, guid: 7fb1195af11b9f14dabd93b7291c16e4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7853913965965308944}
+    - targetCorrespondingSourceObject: {fileID: 1258297012730559348, guid: 7fb1195af11b9f14dabd93b7291c16e4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7853913965965308948}
   m_SourcePrefab: {fileID: 100100000, guid: 7fb1195af11b9f14dabd93b7291c16e4, type: 3}
 --- !u!114 &3241343062354895786 stripped
 MonoBehaviour:
@@ -26409,6 +26423,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7853913965965308948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6865736354298118158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: EventTrigger
+  EventReference:
+    Guid:
+      Data1: 85702226
+      Data2: 1100046056
+      Data3: -424825953
+      Data4: 2070467803
+    Path: event:/SFX/MuffledCableSounds
+  Event: 
+  PlayEvent: 3
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
