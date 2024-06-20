@@ -1,0 +1,254 @@
+fileFormatVersion: 2
+guid: cf8086c088ba2704084c0ff7725eb0a8
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BARREL1
+    second: {fileID: 2100000, guid: 972be999d0a974040a11219988e056c1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BIG_CANDLES1
+    second: {fileID: 2100000, guid: bec7a285f26f34b4ba237019371e81c2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BIG_PILLARS
+    second: {fileID: 2100000, guid: b1660f47b0f37cc459f9b7bdf776f133, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BIG_PLATFORM1
+    second: {fileID: 2100000, guid: 3db7642244cf8a047b061268092fd495, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BRAZIERS1
+    second: {fileID: 2100000, guid: 28ce2af0f285913499d76db0daf79b56, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BRICK_WALLS
+    second: {fileID: 2100000, guid: 0475905823eddfa4d8a43179dab15269, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BRIDGE_ARCH
+    second: {fileID: 2100000, guid: 8914d1a2234e27848b5ddbbcfca43065, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BRIDGE_FLOOR
+    second: {fileID: 2100000, guid: 32e4455653bf30a4c9985cd1c306dd29, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CANDLES_PLATE
+    second: {fileID: 2100000, guid: 0de2ac22ee5d121418ab501ed093ccad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CAVE
+    second: {fileID: 2100000, guid: 9d50c9c592dd9f34b804d06826776aed, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CHAINS1
+    second: {fileID: 2100000, guid: 8c72cb5bf686fb048966cd3caed0b8b6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ceiling_cage13
+    second: {fileID: 2100000, guid: e590b5ccf5d2f7649b6d1dbdbd4c2bd6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chalice
+    second: {fileID: 2100000, guid: 9942b5ac429496a40a643435620f00ef, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DIRT_BIG1
+    second: {fileID: 2100000, guid: 5035ceb4e17602e4aaaa56124fa23378, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DIRT_SMALL1
+    second: {fileID: 2100000, guid: 69bb7bd1b8f61904abd657556fb624b2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DUNGEON_DOOR2
+    second: {fileID: 2100000, guid: bbbb618f67f940e428b13c5d9a639551, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FENCES5
+    second: {fileID: 2100000, guid: e8aa5f0574b02b04b9c7571b42e4decb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FLOOR4
+    second: {fileID: 2100000, guid: 4b32e55e75109354c8b680c34401ae7f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HALF_PILLAR
+    second: {fileID: 2100000, guid: a1436869d8f40c2439dbfcaf32922f9b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HOLES_PILLAR
+    second: {fileID: 2100000, guid: 6678b19c676e2e24d90f9e3ab4da8a30, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PLATE1
+    second: {fileID: 2100000, guid: 15f746da81ea70742a4006f383b2eb81, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ROCKS
+    second: {fileID: 2100000, guid: bae6703fbc744fd4b9b75895ad900d94, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ROOF1
+    second: {fileID: 2100000, guid: 8553db15b5b20a446acbaac969795e00, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SHAFT_ARCH
+    second: {fileID: 2100000, guid: 2f3631c186dc6c94aa2d941068bcb2da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SHAFT_CUBE1
+    second: {fileID: 2100000, guid: 8d31f5573ee81184c908f7dd0bb3b72a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SMALL_HOUSE
+    second: {fileID: 2100000, guid: 4085b2444d75e5f48bef6de3f21995ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SMALL_SHAFT_PILLARS
+    second: {fileID: 2100000, guid: 2172877b12e992d4a88f242ad75f880b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: STAIRS4
+    second: {fileID: 2100000, guid: 9af742ca368d37e4995b2d8acdd1998d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WALLS_ARCH
+    second: {fileID: 2100000, guid: 149b64e105d784f4c8714d55c1d18b46, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
