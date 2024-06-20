@@ -85,7 +85,7 @@ public class GameEvents : MonoBehaviour
         if (OnCheckpointTeleport != null) OnCheckpointTeleport();
     }
 
-    public event Action OnDestroyEnter;
+    //public event Action OnDestroyEnter;
     /*private void OnDestroy()
     {
         if (OnDestroyEnter != null)

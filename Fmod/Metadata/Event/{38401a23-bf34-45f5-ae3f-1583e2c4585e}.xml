@@ -2,13 +2,13 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{38401a23-bf34-45f5-ae3f-1583e2c4585e}">
 		<property name="name">
-			<value>closing-metal-door-44280</value>
+			<value>DoorsClose1</value>
 		</property>
 		<property name="outputFormat">
 			<value>2</value>
 		</property>
 		<relationship name="folder">
-			<destination>{f0336c25-bb15-4017-a3a2-2da743c4e92f}</destination>
+			<destination>{57ce71a6-5006-462f-a793-bcb6722aa389}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{02c09684-c997-4922-bd1a-8304d39499d9}</destination>

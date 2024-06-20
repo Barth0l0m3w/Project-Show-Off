@@ -8,7 +8,7 @@
 			<value>2</value>
 		</property>
 		<relationship name="folder">
-			<destination>{f0336c25-bb15-4017-a3a2-2da743c4e92f}</destination>
+			<destination>{e2603deb-fd01-4d83-a3fb-d8c81ca350df}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{fc6e6eba-f42a-4a68-a1ea-53d75c160392}</destination>
@@ -101,7 +101,7 @@
 	</object>
 	<object class="MixerBusPanner" id="{1718fb70-b3aa-42a0-a167-f24db702df63}">
 		<property name="surroundPanDirection">
-			<value>104.237274</value>
+			<value>110</value>
 		</property>
 		<property name="surroundPanExtent">
 			<value>0</value>

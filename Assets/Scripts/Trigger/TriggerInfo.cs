@@ -26,14 +26,17 @@ public class TriggerInfo : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (_hasTriggered) return; //flag
-        OnEnter();
+        if (other.name == "FloorGrating")
+        {
+            if (_hasTriggered) return; //flag
+            OnEnter();
+        }
     }
 
     [Button]
     private void OnEnter()
     {
-        if(typeEvent != TypeEvent.FreeFall)_hasTriggered = true;
+        if (typeEvent != TypeEvent.FreeFall) _hasTriggered = true;
 
         if (typeEvent == TypeEvent.Stop)
         {
@@ -54,18 +57,21 @@ public class TriggerInfo : MonoBehaviour
         {
             GameEvents.current.SoundTriggerEnter(triggerId);
         }
+
         if (typeEvent == TypeEvent.StopSoundEffect)
         {
             GameEvents.current.StopSoundTriggerEnter();
         }
+
         if (typeEvent == TypeEvent.Animation)
         {
             GameEvents.current.SoundTriggerEnter(triggerId);
             GameEvents.current.AnimTriggerEnter(triggerId);
         }
 
-        if(typeEvent != TypeEvent.FreeFall) Destroy(this.GameObject());
+        if (typeEvent != TypeEvent.FreeFall) Destroy(this.GameObject());
     }
+
     private void Stop()
     {
         GameEvents.current.AnimTriggerEnter(triggerId);
