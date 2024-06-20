@@ -8,9 +8,8 @@ public class MovingCube : MonoBehaviour
 {
     #region SpeedParameters
 
-    [Header("Speed Parameters")] [SerializeField]
-    private float stoppingDeceleration;
-
+    [Header("Speed Parameters")] 
+    public float stoppingDeceleration;
     public float cruisingTopSpeed;
     public float cruisingAcceleration;
     public float freefallTopSpeed;

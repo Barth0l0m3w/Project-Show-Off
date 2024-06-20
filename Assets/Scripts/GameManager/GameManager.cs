@@ -123,6 +123,11 @@ public class GameManager : MonoBehaviour
     {
         platform.cruisingTopSpeed = newSpeed;
     }
+
+    public void SetDeceleration(float newDec)
+    {
+        platform.stoppingDeceleration = newDec;
+    }
     
     public void EventDebug()
     {
