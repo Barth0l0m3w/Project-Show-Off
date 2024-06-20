@@ -332,7 +332,8 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks:
-  - Huston
+  - Houston
+  - Monster
   - SFX
   BanksToLoad: []
   LiveUpdatePort: 9264

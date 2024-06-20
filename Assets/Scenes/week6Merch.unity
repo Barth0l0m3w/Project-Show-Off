@@ -6050,7 +6050,7 @@ PrefabInstance:
     - target: {fileID: 1750366038777280931, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
       propertyPath: anim
       value: 
-      objectReference: {fileID: 1215322048}
+      objectReference: {fileID: 0}
     - target: {fileID: 1750366038777280931, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -6070,7 +6070,7 @@ PrefabInstance:
     - target: {fileID: 8674510896290497045, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
       propertyPath: anim
       value: 
-      objectReference: {fileID: 147631457}
+      objectReference: {fileID: 0}
     - target: {fileID: 8674510896290497045, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
       propertyPath: animId
       value: 4
@@ -11820,13 +11820,41 @@ PrefabInstance:
       value: earpiece
       objectReference: {fileID: 0}
     - target: {fileID: 4429428460571193393, guid: 3de023460516fef47a0a7d6ae767b13d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429428460571193393, guid: 3de023460516fef47a0a7d6ae767b13d, type: 3}
       propertyPath: soundOrigin
       value: 
       objectReference: {fileID: 1994796085}
+    - target: {fileID: 4429428460571193393, guid: 3de023460516fef47a0a7d6ae767b13d, type: 3}
+      propertyPath: <eventPath>k__BackingField.Path
+      value: event:/Houston/Introduction
+      objectReference: {fileID: 0}
     - target: {fileID: 4747236755899643748, guid: 3de023460516fef47a0a7d6ae767b13d, type: 3}
       propertyPath: soundOrigin
       value: 
       objectReference: {fileID: 1994796085}
+    - target: {fileID: 4747236755899643748, guid: 3de023460516fef47a0a7d6ae767b13d, type: 3}
+      propertyPath: <eventPath>k__BackingField.Path
+      value: event:/SFX/ElevatorOpening
+      objectReference: {fileID: 0}
+    - target: {fileID: 4747236755899643748, guid: 3de023460516fef47a0a7d6ae767b13d, type: 3}
+      propertyPath: <eventPath>k__BackingField.Guid.Data1
+      value: 401057759
+      objectReference: {fileID: 0}
+    - target: {fileID: 4747236755899643748, guid: 3de023460516fef47a0a7d6ae767b13d, type: 3}
+      propertyPath: <eventPath>k__BackingField.Guid.Data2
+      value: 1166117803
+      objectReference: {fileID: 0}
+    - target: {fileID: 4747236755899643748, guid: 3de023460516fef47a0a7d6ae767b13d, type: 3}
+      propertyPath: <eventPath>k__BackingField.Guid.Data3
+      value: -651371088
+      objectReference: {fileID: 0}
+    - target: {fileID: 4747236755899643748, guid: 3de023460516fef47a0a7d6ae767b13d, type: 3}
+      propertyPath: <eventPath>k__BackingField.Guid.Data4
+      value: 677648776
+      objectReference: {fileID: 0}
     - target: {fileID: 5913312490958260665, guid: 3de023460516fef47a0a7d6ae767b13d, type: 3}
       propertyPath: anim
       value: 
@@ -16192,23 +16220,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 434572698723985707, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
       propertyPath: <eventPath>k__BackingField.Path
-      value: event:/closing-metal-door-44280
+      value: event:/SFX/ElevatorClosing
       objectReference: {fileID: 0}
     - target: {fileID: 434572698723985707, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
       propertyPath: <eventPath>k__BackingField.Guid.Data1
-      value: 943725091
+      value: 481741462
       objectReference: {fileID: 0}
     - target: {fileID: 434572698723985707, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
       propertyPath: <eventPath>k__BackingField.Guid.Data2
-      value: 1173733172
+      value: 1226615131
       objectReference: {fileID: 0}
     - target: {fileID: 434572698723985707, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
       propertyPath: <eventPath>k__BackingField.Guid.Data3
-      value: -2095759442
+      value: 1648862896
       objectReference: {fileID: 0}
     - target: {fileID: 434572698723985707, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
       propertyPath: <eventPath>k__BackingField.Guid.Data4
-      value: 1582875874
+      value: 1888564320
       objectReference: {fileID: 0}
     - target: {fileID: 821386392136828235, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
       propertyPath: m_LocalScale.x
@@ -20057,13 +20085,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1739884314367015844, guid: 7fb1195af11b9f14dabd93b7291c16e4, type: 3}
+      propertyPath: m_RayInteractors.Array.data[0].m_Interactor
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739884314367015844, guid: 7fb1195af11b9f14dabd93b7291c16e4, type: 3}
+      propertyPath: m_RayInteractors.Array.data[2].m_Interactor
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1839327011101520305, guid: 7fb1195af11b9f14dabd93b7291c16e4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -6.18
       objectReference: {fileID: 0}
     - target: {fileID: 1839327011101520305, guid: 7fb1195af11b9f14dabd93b7291c16e4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.34
       objectReference: {fileID: 0}
     - target: {fileID: 1992103682227994133, guid: 7fb1195af11b9f14dabd93b7291c16e4, type: 3}
       propertyPath: m_AnchorMax.y
@@ -20147,7 +20183,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5095265128644324791, guid: 7fb1195af11b9f14dabd93b7291c16e4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -126.87
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 5095265128644324791, guid: 7fb1195af11b9f14dabd93b7291c16e4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -20487,7 +20523,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8486559837098920627, guid: 7fb1195af11b9f14dabd93b7291c16e4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.005953957
+      value: 0.0002484349
       objectReference: {fileID: 0}
     - target: {fileID: 8935577608409511640, guid: 7fb1195af11b9f14dabd93b7291c16e4, type: 3}
       propertyPath: m_IsActive
