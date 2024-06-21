@@ -14,7 +14,7 @@ public class MovingCube : MonoBehaviour
     public float cruisingAcceleration;
     public float freefallTopSpeed;
     public float freefallAcceleration;
-    [SerializeField] private ParticleSystem brakeSparks;
+    [SerializeField] private List<ParticleSystem> brakeSparks;
 
     #endregion
 
@@ -81,13 +81,19 @@ public class MovingCube : MonoBehaviour
                 if (currentSpeed > 0)
                 {
                     StartCoroutine(GameManager.Instance.TriggerHaptics(1f, 0.1f, 0.1f));
-                    //todo: put in the particle effect in here,
-                    brakeSparks.Play();
+                    foreach (var particle in brakeSparks)
+                    {
+                        particle.Play();
+                    }
                     //todo: play the stopping sound
+                    
                 }
                 else if (currentSpeed <= 0)
                 {
-                    brakeSparks.Stop();
+                    foreach (var particle in brakeSparks)
+                    {
+                        particle.Stop();
+                    }
                 }
 
                 if (hasEnteredFreeFall)
