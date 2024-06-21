@@ -33,6 +33,7 @@ public class TriggerInfo : MonoBehaviour
     [Button]
     private void OnEnter()
     {
+        
         if (typeEvent != TypeEvent.FreeFall) _hasTriggered = true;
 
         if (typeEvent == TypeEvent.Stop)

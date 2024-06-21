@@ -26,21 +26,24 @@ namespace Trigger
     
         private void DisOrEnable()
         {
+            
             if (section != null)
             {
                 if (typeEvent == TypeEvent.Disable)
                 {
+                    Debug.Log(gameObject.name + " is disabling: " + section.name);
                     section.SetActive(false);
                 }
 
                 if (typeEvent == TypeEvent.Enable)
                 {
+                    Debug.Log(gameObject.name + " is enabling: " + section.name);
                     section.SetActive(true);
                 }
             }
             if (elevator)
             {
-                Debug.Log("enabling the elevator");
+                //Debug.Log("enabling the elevator");
                 GameManager.Instance._xrKnob.enabled = true;
                 GameManager.Instance._Lever.enabled = true;
             }
