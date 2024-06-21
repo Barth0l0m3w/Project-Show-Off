@@ -18,6 +18,8 @@ namespace Trigger
 
         private void OnTriggerEnter(Collider other)
         {
+            //todo: make it check just for player and plaform
+            
             if (_hasTriggered) return; //flag
             DisOrEnable();
         }
