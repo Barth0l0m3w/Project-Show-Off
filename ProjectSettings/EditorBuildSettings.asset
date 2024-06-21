@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Week5Merge.unity
+    path: Assets/Scenes/OldScenes/Week5Merge.unity
     guid: 666650d39bbbd0f439c58e81e3fff9cf
   - enabled: 1
     path: Assets/Scenes/EndingScene.unity
