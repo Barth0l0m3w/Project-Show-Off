@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/ElevatorShaft.unity
+    path: Assets/Scenes/Sounds.unity
     guid: 155291e68dfeeec40899c69097335d5b
   - enabled: 0
     path: Assets/Scenes/week6Merch.unity
