@@ -12,6 +12,7 @@ using XRKnob = Unity.VRTemplate.XRKnob;
 public class GameManager : MonoBehaviour
 {
     public MovingCube platform;
+    public Transform player;
     public XRKnob _xrKnob;
     public XRLever _Lever;
     public CanvasGroup fadeScreen;
@@ -119,11 +120,21 @@ public class GameManager : MonoBehaviour
         _Lever.value = !currentLeverState;
     }
 
+    public void SetElevatorCruising()
+    {
+        platform.currentState = MovingCube.ElevatorState.CRUISE;
+    }
+    
     public void SetCruisingSpeed(float newSpeed)
     {
         platform.cruisingTopSpeed = newSpeed;
     }
 
+    public void SetCruisingAcceleration(float newSpeed)
+    {
+        platform.cruisingAcceleration = newSpeed;
+    }
+    
     public void SetDeceleration(float newDec)
     {
         platform.stoppingDeceleration = newDec;
@@ -141,6 +152,12 @@ public class GameManager : MonoBehaviour
             controllerInteractor.gameObject.GetComponentInParent<HandModelCont>().ToggleGFX();
         }
     }
-    
+
+    public void TeleportPlayer(Transform newPosition)
+    {
+        player.SetParent(null);
+        player.position = newPosition.position;
+        player.rotation = newPosition.rotation;
+    }
     
 }
