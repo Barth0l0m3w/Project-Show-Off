@@ -25,6 +25,9 @@ public class FreefallCheck : MonoBehaviour
 
     void SuccesfullStopTrigger()
     {
+        GameManager.Instance.SwitchLeverState();
+        GameManager.Instance.platform.currentState = MovingCube.ElevatorState.CRUISE;
+        GameManager.Instance.ToggleLever();
         gameObject.SetActive(false);
     }
 
