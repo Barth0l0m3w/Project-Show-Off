@@ -12,6 +12,7 @@ using XRKnob = Unity.VRTemplate.XRKnob;
 public class GameManager : MonoBehaviour
 {
     public MovingCube platform;
+    public Transform player;
     public XRKnob _xrKnob;
     public XRLever _Lever;
     public CanvasGroup fadeScreen;
@@ -67,29 +68,23 @@ public class GameManager : MonoBehaviour
             stateToMoveInto = MovingCube.ElevatorState.CRUISE;
         }
     }
-
-    // public void ResetElevator()
-    // {
-    //     platform.transform.position = ElevatorDataContainer.Instance.startData.location;
-    //     platform.currentState = ElevatorDataContainer.Instance.startData.state;
-    // }
+    
     
     public void ReloadCurrentScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        //ResetElevator();
+
     }
 
     public void LoadSpecificScene()
     {
         SceneManager.LoadScene(0);
-        //ResetElevator();
+
     }
 
     public void LoadSpecificScene(int sceneIndex)
     {
         SceneManager.LoadScene(sceneIndex);
-        //ResetElevator();
     }
 
     public void TriggerHaptics()
@@ -119,6 +114,32 @@ public class GameManager : MonoBehaviour
         _Lever.enabled = !_Lever.enabled;
     }
 
+    public void SwitchLeverState()
+    {
+        bool currentLeverState = _Lever.value;
+        _Lever.value = !currentLeverState;
+    }
+
+    public void SetElevatorCruising()
+    {
+        platform.currentState = MovingCube.ElevatorState.CRUISE;
+    }
+    
+    public void SetCruisingSpeed(float newSpeed)
+    {
+        platform.cruisingTopSpeed = newSpeed;
+    }
+
+    public void SetCruisingAcceleration(float newSpeed)
+    {
+        platform.cruisingAcceleration = newSpeed;
+    }
+    
+    public void SetDeceleration(float newDec)
+    {
+        platform.stoppingDeceleration = newDec;
+    }
+    
     public void EventDebug()
     {
         Debug.Log("Rowan is so sexy uwu");
@@ -126,10 +147,17 @@ public class GameManager : MonoBehaviour
 
     public void HandleLeverGrabGFX(BaseInteractionEventArgs eventArgs)
     {
-        //Debug.Log("Test log grabby");
         if (eventArgs.interactorObject is XRBaseControllerInteractor controllerInteractor)
         {
             controllerInteractor.gameObject.GetComponentInParent<HandModelCont>().ToggleGFX();
         }
     }
+
+    public void TeleportPlayer(Transform newPosition)
+    {
+        player.SetParent(null);
+        player.position = newPosition.position;
+        player.rotation = newPosition.rotation;
+    }
+    
 }

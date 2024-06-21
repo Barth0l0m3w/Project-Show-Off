@@ -8,13 +8,12 @@ public class MovingCube : MonoBehaviour
 {
     #region SpeedParameters
 
-    [Header("Speed Parameters")] [SerializeField]
-    private float stoppingDeceleration;
-
-    [SerializeField] private float cruisingTopSpeed;
-    [SerializeField] private float cruisingAcceleration;
-    [SerializeField] private float freefallTopSpeed;
-    [SerializeField] private float freefallAcceleration;
+    [Header("Speed Parameters")] 
+    public float stoppingDeceleration;
+    public float cruisingTopSpeed;
+    public float cruisingAcceleration;
+    public float freefallTopSpeed;
+    public float freefallAcceleration;
     [SerializeField] private ParticleSystem brakeSparks;
 
     #endregion
