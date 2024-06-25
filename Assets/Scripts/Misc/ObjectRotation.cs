@@ -1,18 +1,30 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class ObjectRotation : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private ParticleSystem pSys;
+    [SerializeField] private float rotationSpeed = 0.3f;
+    private bool rotate = true;
+    private XRBaseInteractable _baseInteractable;
+
+    private void Start()
     {
-        
+        _baseInteractable = GetComponent<XRBaseInteractable>();
+        pSys.Play();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        
+        if(rotate)transform.Rotate(Vector3.up, rotationSpeed);
+    }
+
+    public void FlipRotationState()
+    {
+        bool currentRotate = rotate;
+        rotate = !currentRotate;
     }
 }

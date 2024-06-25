@@ -9,16 +9,18 @@ namespace Interactors
     {
         private XRBaseInteractable _baseInteractable;
 
-        [Tooltip("The transform that the object will return to")] [SerializeField]
+        [Tooltip("The transform that the object will return to")] 
         private Vector3 returnPos;
 
         [SerializeField] private float resetDelay;
 
         private bool _isController;
+        private Rigidbody rb;
 
         private void Awake()
         {
             _baseInteractable = GetComponent<XRBaseInteractable>();
+            rb = GetComponent<Rigidbody>();
             returnPos = this.transform.position;
         }
 
@@ -34,6 +36,7 @@ namespace Interactors
         private void ReturnHome()
         {
             transform.position = returnPos;
+            rb.useGravity = false;
         }
     }
 }

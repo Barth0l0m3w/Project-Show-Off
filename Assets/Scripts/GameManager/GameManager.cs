@@ -124,6 +124,11 @@ public class GameManager : MonoBehaviour
     {
         platform.currentState = MovingCube.ElevatorState.CRUISE;
     }
+
+    public void SetElevatorForceStop()
+    {
+        platform.currentState = MovingCube.ElevatorState.STOP;
+    }
     
     public void SetCruisingSpeed(float newSpeed)
     {
