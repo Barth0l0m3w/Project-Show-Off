@@ -26,16 +26,14 @@ public class TriggerInfo : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.name == "FloorGrating")
-        {
-            if (_hasTriggered) return; //flag
-            OnEnter();
-        }
+        if (_hasTriggered) return; //flag
+        if(other.CompareTag("Platform") || other.CompareTag("Enemy") || other.CompareTag("Person"))OnEnter();
     }
 
     [Button]
     private void OnEnter()
     {
+        
         if (typeEvent != TypeEvent.FreeFall) _hasTriggered = true;
 
         if (typeEvent == TypeEvent.Stop)

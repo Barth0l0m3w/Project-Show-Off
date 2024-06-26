@@ -7,6 +7,8 @@ TagManager:
   - Anchor
   - EventTrigger
   - Platform
+  - Enemy
+  - Person
   layers:
   - Default
   - TransparentFX
