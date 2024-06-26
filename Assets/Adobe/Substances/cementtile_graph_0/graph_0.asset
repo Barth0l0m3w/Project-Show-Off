@@ -141,8 +141,8 @@ MonoBehaviour:
   CurrentStatePreset: " <sbspreset pkgurl=\"pkg://Cement_Tile\" label=\"\" >\n  <presetinput
     identifier=\"$outputsize\" uid=\"3785404175\" type=\"8\" value=\"11,11\" />\n 
     <presetinput identifier=\"$randomseed\" uid=\"3067263325\" type=\"4\" value=\"1430\"
-    />\n  <presetinput identifier=\"x_amount\" uid=\"2530509866\" type=\"4\" value=\"6\"
-    />\n  <presetinput identifier=\"y_amount\" uid=\"2530509775\" type=\"4\" value=\"6\"
+    />\n  <presetinput identifier=\"x_amount\" uid=\"2530509866\" type=\"4\" value=\"12\"
+    />\n  <presetinput identifier=\"y_amount\" uid=\"2530509775\" type=\"4\" value=\"12\"
     />\n  <presetinput identifier=\"Crack_contrast\" uid=\"2530511201\" type=\"0\"
     value=\"1\" />\n  <presetinput identifier=\"AO_spreading\" uid=\"2530524552\"
     type=\"0\" value=\"0\" />\n  <presetinput identifier=\"Roughness_position\" uid=\"2530523705\"
@@ -217,7 +217,7 @@ MonoBehaviour:
           GuiDescription: 
           Type: 4
           WidgetType: 1
-        Data: 6
+        Data: 12
         NumericalDescription:
           DefaultValue: 4
           MinValue: 1
@@ -239,7 +239,7 @@ MonoBehaviour:
           GuiDescription: 
           Type: 4
           WidgetType: 1
-        Data: 6
+        Data: 12
         NumericalDescription:
           DefaultValue: 4
           MinValue: 1

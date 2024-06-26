@@ -204,7 +204,7 @@ MonoBehaviour:
   Path: Fmod/Build/Desktop/Monster.bank
   Name: Monster
   StudioPath: bank:/Monster
-  lastModified: 638544973561168609
+  lastModified: 638549106453687432
   FileSizes:
   - Name: Desktop
     Value: 455584
@@ -224,10 +224,10 @@ MonoBehaviour:
   Path: Fmod/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638544973561269292
+  lastModified: 638549231660388994
   FileSizes:
   - Name: Desktop
-    Value: 1398080
+    Value: 1511520
   Exists: 1
 --- !u!114 &-4644008827660912063
 MonoBehaviour:
@@ -256,33 +256,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 8000
---- !u!114 &-4533623264942365924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/DoorsClose1
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/DoorsClose1
-  Guid:
-    Data1: 943725091
-    Data2: 1173733172
-    Data3: -2095759442
-    Data4: 1582875874
-  Banks:
-  - {fileID: -4889845206140959682}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-4271272765467005460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -433,10 +406,10 @@ MonoBehaviour:
   Path: Fmod/Build/Desktop/Houston.bank
   Name: Houston
   StudioPath: bank:/Houston
-  lastModified: 638544973561128945
+  lastModified: 638549231453425738
   FileSizes:
   - Name: Desktop
-    Value: 689792
+    Value: 742464
   Exists: 1
 --- !u!114 &-1551710588668061258
 MonoBehaviour:
@@ -507,10 +480,10 @@ MonoBehaviour:
   Path: Fmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638544973561138614
+  lastModified: 638549231453526362
   FileSizes:
   - Name: Desktop
-    Value: 2072
+    Value: 2118
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -549,19 +522,20 @@ MonoBehaviour:
   - {fileID: 6089809337290135583}
   - {fileID: -4271272765467005460}
   - {fileID: -3620997278315766748}
-  - {fileID: -4533623264942365924}
   - {fileID: -2597111175508146197}
   - {fileID: -3697657854962690967}
   - {fileID: -7247886870408150714}
   - {fileID: -6322164697453057039}
   - {fileID: 6516889159288329081}
   - {fileID: 3884244804055495669}
+  - {fileID: 3307258577584551926}
+  - {fileID: 815582724385492224}
   EditorParameters: []
   MasterBanks:
   - {fileID: 7177870147808563713}
   StringsBanks:
   - {fileID: -1041373408960277726}
-  cacheTime: 638544973561269292
+  cacheTime: 638549231660388994
   cacheVersion: 131618
 --- !u!114 &259414294079605237
 MonoBehaviour:
@@ -590,6 +564,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &815582724385492224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/ManyBats
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/ManyBats
+  Guid:
+    Data1: -876124240
+    Data2: 1125825293
+    Data3: 527688068
+    Data4: -597535747
+  Banks:
+  - {fileID: -4889845206140959682}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 7500
 --- !u!114 &1259622410949527545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -637,6 +638,33 @@ MonoBehaviour:
     Data4: 1538079426
   Banks:
   - {fileID: -2353207775626288113}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3307258577584551926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/VewBats
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/VewBats
+  Guid:
+    Data1: 1610695336
+    Data2: 1236025588
+    Data3: 1002448013
+    Data4: 1416763380
+  Banks:
+  - {fileID: -4889845206140959682}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -740,7 +768,7 @@ MonoBehaviour:
   Path: Fmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638544817278994312
+  lastModified: 638549231453511073
   FileSizes:
   - Name: Desktop
     Value: 1036
