@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
 {
     public MovingCube platform;
     public Transform player;
-    public XRKnob _xrKnob;
     public XRLever _Lever;
     public CanvasGroup fadeScreen;
     public MovingCube.ElevatorState stateToMoveInto;
@@ -110,7 +109,7 @@ public class GameManager : MonoBehaviour
 
     public void ToggleLever()
     {
-        _xrKnob.enabled = !_xrKnob.enabled;
+        //_xrKnob.enabled = !_xrKnob.enabled;
         _Lever.enabled = !_Lever.enabled;
     }
 
@@ -123,6 +122,11 @@ public class GameManager : MonoBehaviour
     public void SetElevatorCruising()
     {
         platform.currentState = MovingCube.ElevatorState.CRUISE;
+    }
+
+    public void SetElevatorForceStop()
+    {
+        platform.currentState = MovingCube.ElevatorState.STOP;
     }
     
     public void SetCruisingSpeed(float newSpeed)
