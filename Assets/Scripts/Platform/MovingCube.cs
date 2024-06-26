@@ -146,7 +146,6 @@ public class MovingCube : MonoBehaviour
     private void Enter()
     {
         Debug.Log("Enter trigger area");
-        GameManager.Instance._xrKnob.value = 0.09f;
         GameManager.Instance._Lever.value = false;
     }
 
