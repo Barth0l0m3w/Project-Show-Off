@@ -36,7 +36,7 @@ public class LevelLoader : MonoBehaviour
         //Debug.Log("OnSceneLoaded called in scene: " + scene.name);
         //Debug.Log("Knob value in scene: " + scene.name + " is: " + _xrKnob.value);
         //Debug.Log("Moving into state: " + stateToMoveInto + " in scene: " + scene.name);
-        GameManager.Instance.SetValue(GameManager.Instance._xrKnob.value);
+        //GameManager.Instance.SetValue(GameManager.Instance._xrKnob.value);
         //Debug.Log("After setting the value, the current state is: " + platform.currentState + " in scene: " + scene.name);
     }
     

@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
 {
     public MovingCube platform;
     public Transform player;
-    public XRKnob _xrKnob;
     public XRLever _Lever;
     public CanvasGroup fadeScreen;
     public MovingCube.ElevatorState stateToMoveInto;
