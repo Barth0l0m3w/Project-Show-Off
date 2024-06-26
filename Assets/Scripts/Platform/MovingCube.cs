@@ -137,7 +137,7 @@ public class MovingCube : MonoBehaviour
         Debug.Log("Has teleported");
         hasEnteredFreeFall = false;
         currentState = ElevatorState.CRUISE;
-        GameManager.Instance._xrKnob.enabled = true;
+        //GameManager.Instance._xrKnob.enabled = true;
         GameManager.Instance._Lever.enabled = true;
         currentSpeed = cruisingTopSpeed;
     }

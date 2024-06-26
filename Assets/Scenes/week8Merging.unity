@@ -5863,7 +5863,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 821386392136828235, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.507
+      value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: 821386392136828235, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5899,7 +5899,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9221255125768352103, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
       propertyPath: m_Name
-      value: trigger
+      value: StopTrigger
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -16551,13 +16551,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 521462885}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -6.04, y: 2.464, z: -0.818}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1445799172}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &527751206
 GameObject:
   m_ObjectHideFlags: 0
@@ -43587,7 +43587,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9221255125768352103, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
       propertyPath: m_Name
-      value: trigger (1)
+      value: SoundEffect
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7957652411752482083, guid: 399c31ee583b47441bcb8996bf042203, type: 3}
@@ -47835,6 +47835,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4372499896992565831, guid: 7fb1195af11b9f14dabd93b7291c16e4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -40
+      objectReference: {fileID: 0}
     - target: {fileID: 4840172214565445772, guid: 7fb1195af11b9f14dabd93b7291c16e4, type: 3}
       propertyPath: m_OnValueChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -47890,6 +47894,14 @@ PrefabInstance:
     - target: {fileID: 5247901658938425913, guid: 7fb1195af11b9f14dabd93b7291c16e4, type: 3}
       propertyPath: m_UseGravity
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5247901658938425913, guid: 7fb1195af11b9f14dabd93b7291c16e4, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5247901658938425913, guid: 7fb1195af11b9f14dabd93b7291c16e4, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5303431776203336101, guid: 7fb1195af11b9f14dabd93b7291c16e4, type: 3}
       propertyPath: m_IsActive
@@ -48168,12 +48180,28 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6491366331277793294, guid: 7fb1195af11b9f14dabd93b7291c16e4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6491366331277793294, guid: 7fb1195af11b9f14dabd93b7291c16e4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6491366331277793294, guid: 7fb1195af11b9f14dabd93b7291c16e4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6491366331277793294, guid: 7fb1195af11b9f14dabd93b7291c16e4, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.7071068
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6491366331277793294, guid: 7fb1195af11b9f14dabd93b7291c16e4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6491366331277793294, guid: 7fb1195af11b9f14dabd93b7291c16e4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -90
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 6645190915744829759, guid: 7fb1195af11b9f14dabd93b7291c16e4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -48285,6 +48313,7 @@ PrefabInstance:
     - {fileID: 2513506278930777111, guid: 7fb1195af11b9f14dabd93b7291c16e4, type: 3}
     - {fileID: 2402555877928016028, guid: 7fb1195af11b9f14dabd93b7291c16e4, type: 3}
     - {fileID: 2859337833601843527, guid: 7fb1195af11b9f14dabd93b7291c16e4, type: 3}
+    - {fileID: 7516730392558316809, guid: 7fb1195af11b9f14dabd93b7291c16e4, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4372499896992565831, guid: 7fb1195af11b9f14dabd93b7291c16e4, type: 3}
       insertIndex: -1
@@ -48433,6 +48462,10 @@ PrefabInstance:
       propertyPath: soundOrigin
       value: 
       objectReference: {fileID: 1043805217}
+    - target: {fileID: 5265223796593679302, guid: 533ac27107ae2674c9f9f549e83aea2b, type: 3}
+      propertyPath: <eventPath>k__BackingField.Path
+      value: event:/Houston/Freefall
+      objectReference: {fileID: 0}
     - target: {fileID: 5405826123074440038, guid: 533ac27107ae2674c9f9f549e83aea2b, type: 3}
       propertyPath: m_IsActive
       value: 0

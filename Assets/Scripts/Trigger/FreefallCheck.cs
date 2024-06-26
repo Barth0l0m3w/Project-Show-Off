@@ -17,7 +17,7 @@ public class FreefallCheck : MonoBehaviour
     {
         if (other.CompareTag("Platform"))
         {
-            GameManager.Instance._xrKnob.enabled = false;
+            //GameManager.Instance._xrKnob.enabled = false;
             GameManager.Instance._Lever.enabled = false;
         }
         

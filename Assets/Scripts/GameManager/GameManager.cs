@@ -110,7 +110,7 @@ public class GameManager : MonoBehaviour
 
     public void ToggleLever()
     {
-        _xrKnob.enabled = !_xrKnob.enabled;
+        //_xrKnob.enabled = !_xrKnob.enabled;
         _Lever.enabled = !_Lever.enabled;
     }
 
