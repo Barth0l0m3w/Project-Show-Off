@@ -27,7 +27,7 @@ public class TriggerInfo : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (_hasTriggered) return; //flag
-        if(other.CompareTag("Platform") || other.CompareTag("Enemy") || other.CompareTag("Person"))OnEnter();
+        if(other.CompareTag("Platform") || other.CompareTag("Enemy") || other.CompareTag("Person") && typeEvent != TypeEvent.FreeFall)OnEnter();
     }
 
     [Button]
