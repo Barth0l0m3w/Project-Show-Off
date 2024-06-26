@@ -5313,7 +5313,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &825753455
 Transform:
   m_ObjectHideFlags: 0
@@ -5455,7 +5455,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1077721593
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10834,7 +10834,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4453081948477090209, guid: 47e020363fff0054fbae4d702dffb327, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7259054713870735770, guid: 47e020363fff0054fbae4d702dffb327, type: 3}
       propertyPath: LightsModule.ratio
@@ -10896,6 +10896,10 @@ PrefabInstance:
     - target: {fileID: 6993839422784641779, guid: a91e82a6a9e950d498892d2136ff7de9, type: 3}
       propertyPath: m_Name
       value: BrakeSparks
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993839422784641779, guid: a91e82a6a9e950d498892d2136ff7de9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11108,6 +11112,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DebrisFalling
       objectReference: {fileID: 0}
+    - target: {fileID: 8661399195055241891, guid: 56e98558a971e2345adebd85cc515271, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11121,13 +11129,14 @@ SceneRoots:
   - {fileID: 7922895404992810195}
   - {fileID: 4952894898230844335}
   - {fileID: 1077721597}
-  - {fileID: 5909335571014385168}
   - {fileID: 7797100958019852232}
   - {fileID: 467460813}
-  - {fileID: 4481835167558349165}
   - {fileID: 744932167}
   - {fileID: 1031421763}
   - {fileID: 670409847}
   - {fileID: 1620633734}
   - {fileID: 173073992273939767}
   - {fileID: 825753455}
+  - {fileID: 7923261169943264094}
+  - {fileID: 1269166885284967678}
+  - {fileID: 2018858565}
