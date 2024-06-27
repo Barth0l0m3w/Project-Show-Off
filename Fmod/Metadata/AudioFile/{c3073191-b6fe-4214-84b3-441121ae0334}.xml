@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{c3073191-b6fe-4214-84b3-441121ae0334}">
+		<property name="assetPath">
+			<value>346122-PWL03_0291_SOUNDSNAP_CANADA_2.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>42.291239583333336</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3a2e2cdb-d4d7-4574-8768-58a0176a3830}</destination>
+		</relationship>
+	</object>
+</objects>
