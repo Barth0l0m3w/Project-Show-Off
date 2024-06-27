@@ -19,9 +19,8 @@ namespace Trigger
         private void OnTriggerEnter(Collider other)
         {
             if (_hasTriggered) return; //flag
-            if (other.CompareTag("Platform"))
+            if (other.CompareTag("Platform") || other.CompareTag("Person"))
             {
-                
                 DisOrEnable();
             }
         }

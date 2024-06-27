@@ -28,7 +28,7 @@ public class LevelLoader : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(_asyncOperation);
+        //Debug.Log(_asyncOperation);
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
