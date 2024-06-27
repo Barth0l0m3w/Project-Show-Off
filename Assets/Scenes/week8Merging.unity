@@ -48584,6 +48584,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6773106073023749810, guid: 7fb1195af11b9f14dabd93b7291c16e4, type: 3}
+      propertyPath: far clip plane
+      value: 2500
+      objectReference: {fileID: 0}
     - target: {fileID: 6808025678801290924, guid: 7fb1195af11b9f14dabd93b7291c16e4, type: 3}
       propertyPath: m_OnValueChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -48608,6 +48612,10 @@ PrefabInstance:
       propertyPath: mp2
       value: 
       objectReference: {fileID: 1952269026}
+    - target: {fileID: 8311121813182364459, guid: 7fb1195af11b9f14dabd93b7291c16e4, type: 3}
+      propertyPath: cruisingTopSpeed
+      value: 1.3
+      objectReference: {fileID: 0}
     - target: {fileID: 8311121813182364459, guid: 7fb1195af11b9f14dabd93b7291c16e4, type: 3}
       propertyPath: freefallTopSpeed
       value: 9.8
@@ -48825,6 +48833,10 @@ PrefabInstance:
       propertyPath: m_TriggerEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1964011229}
+    - target: {fileID: 2510935258271850697, guid: 533ac27107ae2674c9f9f549e83aea2b, type: 3}
+      propertyPath: m_TriggerEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
+      value: 0.95
+      objectReference: {fileID: 0}
     - target: {fileID: 2596963987221164171, guid: 533ac27107ae2674c9f9f549e83aea2b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
