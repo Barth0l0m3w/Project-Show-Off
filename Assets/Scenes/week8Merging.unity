@@ -7263,7 +7263,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1036e7be8d5e26e43b7e6670c1279990, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1036e7be8d5e26e43b7e6670c1279990, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -32122,11 +32122,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 7050107917886550943, guid: cf8086c088ba2704084c0ff7725eb0a8, type: 3}
---- !u!1 &1413727017 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1234599991785518051, guid: 00c66a8770228af48a4a71001f6c1f3a, type: 3}
-  m_PrefabInstance: {fileID: 421271664}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1414057015
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34564,11 +34559,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4044395703086856456, guid: 47e020363fff0054fbae4d702dffb327, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.81874317
+      value: 0.9396937
       objectReference: {fileID: 0}
     - target: {fileID: 4044395703086856456, guid: 47e020363fff0054fbae4d702dffb327, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.57415986
+      value: -0.34201735
       objectReference: {fileID: 0}
     - target: {fileID: 4044395703086856456, guid: 47e020363fff0054fbae4d702dffb327, type: 3}
       propertyPath: m_LocalRotation.y
@@ -34576,11 +34571,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4044395703086856456, guid: 47e020363fff0054fbae4d702dffb327, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000029802319
+      value: -0.00000008940697
       objectReference: {fileID: 0}
     - target: {fileID: 4044395703086856456, guid: 47e020363fff0054fbae4d702dffb327, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -70.082
+      value: -40
       objectReference: {fileID: 0}
     - target: {fileID: 4044395703086856456, guid: 47e020363fff0054fbae4d702dffb327, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -34597,6 +34592,38 @@ PrefabInstance:
     - target: {fileID: 4453081948477090209, guid: 47e020363fff0054fbae4d702dffb327, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7259054713870735770, guid: 47e020363fff0054fbae4d702dffb327, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 1.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 7259054713870735770, guid: 47e020363fff0054fbae4d702dffb327, type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 2500
+      objectReference: {fileID: 0}
+    - target: {fileID: 7259054713870735770, guid: 47e020363fff0054fbae4d702dffb327, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7259054713870735770, guid: 47e020363fff0054fbae4d702dffb327, type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7259054713870735770, guid: 47e020363fff0054fbae4d702dffb327, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 7259054713870735770, guid: 47e020363fff0054fbae4d702dffb327, type: 3}
+      propertyPath: InitialModule.startSpeed.minScalar
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 7259054713870735770, guid: 47e020363fff0054fbae4d702dffb327, type: 3}
+      propertyPath: InitialModule.gravityModifier.scalar
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7259054713870735770, guid: 47e020363fff0054fbae4d702dffb327, type: 3}
+      propertyPath: EmissionModule.rateOverTime.minScalar
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 7959748975270948368, guid: 47e020363fff0054fbae4d702dffb327, type: 3}
       propertyPath: leftHand
