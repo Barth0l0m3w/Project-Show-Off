@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{68778e7c-8351-4e43-992b-785b92d41da3}">
+		<property name="assetPath">
+			<value>chains-chiming-64965.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>24</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>60.143999999999998</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3a2e2cdb-d4d7-4574-8768-58a0176a3830}</destination>
+		</relationship>
+	</object>
+</objects>
