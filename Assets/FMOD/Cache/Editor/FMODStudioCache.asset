@@ -339,7 +339,7 @@ MonoBehaviour:
   Path: Fmod/Build/Desktop/Monster.bank
   Name: Monster
   StudioPath: bank:/Monster
-  lastModified: 638551019219907527
+  lastModified: 638551055600000000
   FileSizes:
   - Name: Desktop
     Value: 456064
@@ -359,7 +359,7 @@ MonoBehaviour:
   Path: Fmod/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638551022299413315
+  lastModified: 638551055600000000
   FileSizes:
   - Name: Desktop
     Value: 4512416
@@ -487,7 +487,7 @@ MonoBehaviour:
   Path: Fmod/Build/Desktop/Houston.bank
   Name: Houston
   StudioPath: bank:/Houston
-  lastModified: 638551019219367086
+  lastModified: 638550138700000000
   FileSizes:
   - Name: Desktop
     Value: 742464
@@ -669,7 +669,7 @@ MonoBehaviour:
   Path: Fmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638551022277039737
+  lastModified: 638551055600000000
   FileSizes:
   - Name: Desktop
     Value: 2540
@@ -760,7 +760,7 @@ MonoBehaviour:
   - {fileID: 7177870147808563713}
   StringsBanks:
   - {fileID: -1041373408960277726}
-  cacheTime: 638551022299413315
+  cacheTime: 638551055600000000
   cacheVersion: 131618
 --- !u!114 &259414294079605237
 MonoBehaviour:
@@ -966,7 +966,7 @@ MonoBehaviour:
   Path: Fmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638551022277024672
+  lastModified: 638526642280000000
   FileSizes:
   - Name: Desktop
     Value: 1036
