@@ -7053,7 +7053,7 @@ MonoBehaviour:
   Params: []
   OverrideAttenuation: 1
   OverrideMinDistance: 5
-  OverrideMaxDistance: 30
+  OverrideMaxDistance: 50
 --- !u!1001 &296143295
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30581,8 +30581,8 @@ MonoBehaviour:
   AllowNonRigidbodyDoppler: 0
   Params: []
   OverrideAttenuation: 1
-  OverrideMinDistance: 10
-  OverrideMaxDistance: 75
+  OverrideMinDistance: 20
+  OverrideMaxDistance: 85
 --- !u!136 &1216680184
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -34206,7 +34206,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1436690334
 Transform:
   m_ObjectHideFlags: 0
