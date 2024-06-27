@@ -28,6 +28,7 @@ public class Fadeout : MonoBehaviour
     {
         if (other.CompareTag("Platform"))
         {
+            Debug.Log("Fading");
             if (_FadeType == FadeType.FADEIN)
             {
                 startFadein = true;
