@@ -7,7 +7,7 @@ namespace Trigger
         [SerializeField] private GameObject section;
         [SerializeField] private bool elevator;
         private bool _hasTriggered;
-  
+
         public enum TypeEvent
         {
             Enable,
@@ -18,17 +18,19 @@ namespace Trigger
 
         private void OnTriggerEnter(Collider other)
         {
-            //todo: make it check just for player and plaform
-            
             if (_hasTriggered) return; //flag
-            DisOrEnable();
+            if (other.CompareTag("Platform"))
+            {
+                
+                DisOrEnable();
+            }
         }
-    
+
         private void DisOrEnable()
         {
-            
             if (section != null)
             {
+                
                 if (typeEvent == TypeEvent.Disable)
                 {
                     Debug.Log(gameObject.name + " is disabling: " + section.name);
@@ -41,12 +43,15 @@ namespace Trigger
                     section.SetActive(true);
                 }
             }
+
             if (elevator)
             {
                 //Debug.Log("enabling the elevator");
                 //GameManager.Instance._xrKnob.enabled = true;
                 GameManager.Instance._Lever.enabled = true;
             }
+            
+            _hasTriggered = true;
         }
     }
 }

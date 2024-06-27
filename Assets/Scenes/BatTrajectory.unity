@@ -30249,6 +30249,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FadeTriggers
       objectReference: {fileID: 0}
+    - target: {fileID: 4229903409454765236, guid: a2e7aa768fb2f304ba9496577d7d6cf8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7075659221001387811, guid: a2e7aa768fb2f304ba9496577d7d6cf8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.58
